@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servidores Dedicados - Rede Gamer Hospedagens</title>
-    <meta name="description" content="Servidores dedicados de alta performance para gamers. Ryzen 7, Dual Xeon, com até 256GB RAM. Localizados nos EUA.">
-    <meta name="keywords" content="servidor dedicado, hospedagem, Ryzen, Xeon, gaming, performance, EUA">
+    <title>VPS EUA - Rede Gamer Hospedagens</title>
+    <meta name="description" content="VPS Gamer nos EUA com baixa latência. SSD NVMe, proteção DDoS, 1Gbps ilimitado. Servidores em Ashburn, Virginia.">
+    <meta name="keywords" content="VPS, VPS EUA, servidor dedicado, hospedagem gamer, AMD Ryzen, Ashburn, DDoS proteção">
     <meta name="author" content="Rede Gamer Hospedagens">
     <!-- TailwindCSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -120,62 +120,40 @@
         .glow-text {
             text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
         }
-        .pricing-table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0 1rem;
-        }
-        .pricing-row {
-            background: linear-gradient(145deg, #0a0a0a, #000000);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 0.75rem;
+        .pricing-card {
+            position: relative;
             overflow: hidden;
-            transition: all 0.3s ease;
         }
-        .pricing-row:hover {
-            transform: translateY(-5px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
-        }
-        .pricing-header {
-            background: rgba(17, 17, 17, 0.8);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .popular-badge {
-            background: linear-gradient(90deg, #111111, #0a0a0a);
-            color: #ffffff;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
+        .pricing-card.popular::before {
+            content: 'MAIS POPULAR';
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            background: #111111;
+            color: white;
+            padding: 3px 30px;
             font-size: 0.75rem;
-            font-weight: 600;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: bold;
+            transform: rotate(45deg);
+            z-index: 10;
         }
-        .spec-value {
-            font-weight: 600;
-            color: #ffffff;
+        .original-price {
+            text-decoration: line-through;
+            color: #aaaaaa;
+            font-size: 0.9rem;
         }
-        .price-highlight {
+        .discount-price {
             font-size: 1.5rem;
-            font-weight: 700;
+            font-weight: bold;
             color: #ffffff;
         }
-        @media (max-width: 768px) {
-            .pricing-table {
-                display: block;
-            }
-            .pricing-row {
-                display: block;
-                margin-bottom: 2rem;
-            }
-            .pricing-header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 1rem;
-            }
-            .pricing-body {
-                padding: 1rem;
-            }
+        .savings-badge {
+            background: rgba(17, 136, 17, 0.2);
+            color: #4ade80;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -278,17 +256,17 @@
         <div class="container mx-auto px-4 relative z-10">
             <div class="text-center max-w-3xl mx-auto">
                 <div class="inline-block mb-4 px-4 py-1 bg-[#111111] border border-[#222222] rounded-full text-sm font-medium tracking-wider">
-                    <span class="text-[#aaaaaa]">SERVIDORES DEDICADOS NOS EUA</span>
+                    <span class="text-[#aaaaaa]">VPS NOS ESTADOS UNIDOS</span>
                 </div>
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 tracking-wide">
-                    INFRAESTRUTURA <span class="highlight">DEDICADA</span> DE ALTA PERFORMANCE
+                    VPS <span class="highlight">GAMER</span> NOS EUA
                 </h1>
                 <p class="text-xl text-[#cccccc] max-w-2xl mx-auto mb-8">
-                    Servidores dedicados com processadores de última geração, memória RAM expansível e armazenamento SSD/HDD para máxima performance nos EUA.
+                    Servidores VPS de alta performance localizados em Ashburn, Virginia, com conectividade global e proteção DDoS.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
                     <button class="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center tracking-wider">
-                        ESCOLHA SEU SERVIDOR
+                        ESCOLHA SEU PLANO
                         <i class='bx bx-right-arrow-alt ml-2 text-xl'></i>
                     </button>
                     <button class="btn text-white px-8 py-4 rounded-xl font-bold text-lg tracking-wider">
@@ -300,7 +278,7 @@
     </section>
 
     <!-- Location Info -->
-    <section class="py-12 bg-[#0a0a0a]">
+    <section class="py-12">
         <div class="container mx-auto px-4">
             <div class="card p-8 rounded-2xl max-w-4xl mx-auto">
                 <div class="flex flex-col md:flex-row items-center">
@@ -308,21 +286,14 @@
                         <div class="text-8xl">🇺🇸</div>
                     </div>
                     <div class="md:w-2/3 text-center md:text-left">
-                        <h2 class="text-2xl font-bold mb-4">Localizado em Kansas City, Missouri</h2>
+                        <h2 class="text-2xl font-bold mb-4">Localizado em Ashburn, Virginia</h2>
                         <p class="text-[#cccccc] mb-4">
-                            Nossos servidores dedicados estão localizados em Kansas City, Missouri, 
-                            nos datacenters da Oblakdc.com Sapi de CV, garantindo excelente conectividade 
-                            global e baixa latência para servidores internacionais.
+                            Nossos servidores VPS EUA estão localizados em um dos principais hubs de internet do mundo, 
+                            garantindo excelente conectividade global e baixa latência para servidores internacionais.
                         </p>
-                        <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 text-sm text-[#aaaaaa]">
-                            <div class="flex items-center">
-                                <i class='bx bx-map mr-2'></i>
-                                <span>Kansas City, Missouri - United States Of America</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class='bx bx-building mr-2'></i>
-                                <span>Oblakdc.com Sapi de CV</span>
-                            </div>
+                        <div class="flex items-center justify-center md:justify-start text-sm text-[#aaaaaa]">
+                            <i class='bx bx-map mr-2'></i>
+                            <span>Ashburn, Virginia - Datacenter Equinix</span>
                         </div>
                     </div>
                 </div>
@@ -330,230 +301,265 @@
         </div>
     </section>
 
-    <!-- Dedicated Servers Section -->
-    <section class="py-20">
+    <!-- Pricing Section -->
+    <section class="py-20 bg-[#0a0a0a]">
         <div class="container mx-auto px-4">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-wide">SERVIDORES <span class="highlight">DEDICADOS</span></h2>
-                <p class="text-[#cccccc] text-lg">Escolha o servidor perfeito para suas necessidades de alta performance</p>
-                <div class="mt-6 p-4 bg-[#111111] border border-[#222222] rounded-lg inline-block">
-                    <p class="text-[#aaaaaa]">
-                        <i class='bx bx-info-circle text-white mr-2'></i>
-                        Todos os servidores incluem 1 IP dedicado e largura de banda ilimitada!
-                    </p>
-                </div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-wide">PLANOS <span class="highlight">VPS EUA</span></h2>
+                <p class="text-[#cccccc] text-lg">Escolha o plano ideal para suas necessidades com descontos especiais!</p>
             </div>
             
-            <div class="overflow-x-auto">
-                <table class="pricing-table w-full">
-                    <thead>
-                        <tr class="pricing-header">
-                            <th class="p-4 text-left">SERVIDOR</th>
-                            <th class="p-4 text-left">PROCESSADOR</th>
-                            <th class="p-4 text-left">RAM</th>
-                            <th class="p-4 text-left">ARMAZENAMENTO</th>
-                            <th class="p-4 text-left">PREÇO</th>
-                            <th class="p-4 text-left">AÇÕES</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Ryzen 7 3800X Server -->
-                        <tr class="pricing-row">
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="flex items-center">
-                                    <div class="w-12 h-12 rounded-xl bg-black border border-[#222222] flex items-center justify-center mr-4 neon-border">
-                                        <i class='bx bx-chip text-xl text-white'></i>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold text-lg">RYZEN 7 3800X</h3>
-                                        <span class="text-sm text-[#aaaaaa]">8 Cores / 16 Threads</span>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="spec-value">3.9GHz / 4.5GHz Turbo</div>
-                                <div class="text-sm text-[#aaaaaa]">AMD Ryzen 7</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="spec-value">32GB - 64GB RAM</div>
-                                <div class="text-sm text-[#aaaaaa]">DDR4 ECC</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="spec-value">480GB SSD ou 4TB HDD</div>
-                                <div class="text-sm text-[#aaaaaa]">NVMe ou SATA</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="price-highlight">A partir de R$ 474,00</div>
-                                <div class="text-sm text-[#aaaaaa]">/mês</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <button class="btn text-white px-4 py-2 rounded-lg font-semibold text-sm tracking-wider">CONTRATAR</button>
-                            </td>
-                        </tr>
-                        
-                        <!-- Dual Xeon 5520 Server -->
-                        <tr class="pricing-row">
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="flex items-center">
-                                    <div class="w-12 h-12 rounded-xl bg-black border border-[#222222] flex items-center justify-center mr-4 neon-border">
-                                        <i class='bx bx-cpu text-xl text-white'></i>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold text-lg">DUAL XEON 5520</h3>
-                                        <span class="text-sm text-[#aaaaaa]">8 Cores / 16 Threads</span>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="spec-value">2.26GHz - 2 Processadores</div>
-                                <div class="text-sm text-[#aaaaaa]">Intel Xeon</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="spec-value">16GB - 64GB RAM</div>
-                                <div class="text-sm text-[#aaaaaa]">DDR3 ECC</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="spec-value">2x 2TB SATA</div>
-                                <div class="text-sm text-[#aaaaaa]">RAID 1</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="price-highlight">A partir de R$ 199,00</div>
-                                <div class="text-sm text-[#aaaaaa]">/mês</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <button class="btn text-white px-4 py-2 rounded-lg font-semibold text-sm tracking-wider">CONTRATAR</button>
-                            </td>
-                        </tr>
-                        
-                        <!-- Dual Xeon E5-2660 Server -->
-                        <tr class="pricing-row">
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="flex items-center">
-                                    <div class="w-12 h-12 rounded-xl bg-black border border-[#222222] flex items-center justify-center mr-4 neon-border">
-                                        <i class='bx bx-server text-xl text-white'></i>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold text-lg">DUAL XEON E5-2660</h3>
-                                        <span class="text-sm text-[#aaaaaa]">16 Cores / 32 Threads</span>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="spec-value">16 Cores / 32 Threads</div>
-                                <div class="text-sm text-[#aaaaaa]">Dual Processador</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="spec-value">32GB - 128GB RAM</div>
-                                <div class="text-sm text-[#aaaaaa]">DDR3 ECC</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="spec-value">480GB SSD</div>
-                                <div class="text-sm text-[#aaaaaa]">NVMe</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="price-highlight">A partir de R$ 399,00</div>
-                                <div class="text-sm text-[#aaaaaa]">/mês</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <button class="btn text-white px-4 py-2 rounded-lg font-semibold text-sm tracking-wider">CONTRATAR</button>
-                            </td>
-                        </tr>
-                        
-                        <!-- Xeon E5-2683v4 Server (Popular) -->
-                        <tr class="pricing-row">
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="flex items-center">
-                                    <div class="w-12 h-12 rounded-xl bg-black border border-[#222222] flex items-center justify-center mr-4 neon-border">
-                                        <i class='bx bx-trending-up text-xl text-white'></i>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold text-lg">XEON E5-2683V4</h3>
-                                        <div class="flex items-center mt-1">
-                                            <span class="text-sm text-[#aaaaaa]">16 Cores / 32 Threads</span>
-                                            <span class="popular-badge ml-2">MAIS POPULAR</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="spec-value">16 Cores / 32 Threads</div>
-                                <div class="text-sm text-[#aaaaaa]">Processador Único</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="spec-value">32GB - 256GB RAM</div>
-                                <div class="text-sm text-[#aaaaaa]">DDR4 ECC</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="spec-value">8TB SATA HDD</div>
-                                <div class="text-sm text-[#aaaaaa]">RAID 1</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="price-highlight">A partir de R$ 499,00</div>
-                                <div class="text-sm text-[#aaaaaa]">/mês</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <button class="btn-primary text-white px-4 py-2 rounded-lg font-semibold text-sm tracking-wider">CONTRATAR</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Plano 4 Cores -->
+                <div class="pricing-card card p-6 rounded-2xl">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2">VPS BÁSICO</h3>
+                        <div class="original-price">R$89,90/mês</div>
+                        <div class="discount-price">R$59,90/mês</div>
+                        <div class="savings-badge mt-2">Economize 33%</div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-green-500 mr-3'></i>
+                            <span>4 Cores</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-green-500 mr-3'></i>
+                            <span>8GB RAM</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-green-500 mr-3'></i>
+                            <span>75GB SSD NVMe</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-green-500 mr-3'></i>
+                            <span>1Gbps Ilimitado</span>
+                        </li>
+                    </ul>
+                    <button class="btn w-full py-3 rounded-lg font-semibold tracking-wider">
+                        CONTRATAR AGORA
+                    </button>
+                </div>
+                
+                <!-- Plano 6 Cores -->
+                <div class="pricing-card card p-6 rounded-2xl">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2">VPS MÉDIO</h3>
+                        <div class="original-price">R$149,90/mês</div>
+                        <div class="discount-price">R$99,90/mês</div>
+                        <div class="savings-badge mt-2">Economize 33%</div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-green-500 mr-3'></i>
+                            <span>6 Cores</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-green-500 mr-3'></i>
+                            <span>12GB RAM</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-green-500 mr-3'></i>
+                            <span>100GB SSD NVMe</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-green-500 mr-3'></i>
+                            <span>1Gbps Ilimitado</span>
+                        </li>
+                    </ul>
+                    <button class="btn w-full py-3 rounded-lg font-semibold tracking-wider">
+                        CONTRATAR AGORA
+                    </button>
+                </div>
+                
+                <!-- Plano 8 Cores (Popular) -->
+                <div class="pricing-card card p-6 rounded-2xl popular">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2">VPS PROFISSIONAL</h3>
+                        <div class="original-price">R$199,90/mês</div>
+                        <div class="discount-price">R$135,90/mês</div>
+                        <div class="savings-badge mt-2">Economize 32%</div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-green-500 mr-3'></i>
+                            <span>8 Cores</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-green-500 mr-3'></i>
+                            <span>24GB RAM</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-green-500 mr-3'></i>
+                            <span>200GB SSD NVMe</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-green-500 mr-3'></i>
+                            <span>1Gbps Ilimitado</span>
+                        </li>
+                    </ul>
+                    <button class="btn-primary w-full py-3 rounded-lg font-semibold tracking-wider">
+                        CONTRATAR AGORA
+                    </button>
+                </div>
+                
+                <!-- Plano 12 Cores -->
+                <div class="pricing-card card p-6 rounded-2xl">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2">VPS AVANÇADO</h3>
+                        <div class="original-price">R$269,90/mês</div>
+                        <div class="discount-price">R$189,90/mês</div>
+                        <div class="savings-badge mt-2">Economize 30%</div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-green-500 mr-3'></i>
+                            <span>12 Cores</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-green-500 mr-3'></i>
+                            <span>48GB RAM</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-green-500 mr-3'></i>
+                            <span>300GB SSD NVMe</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-green-500 mr-3'></i>
+                            <span>1Gbps Ilimitado</span>
+                        </li>
+                    </ul>
+                    <button class="btn w-full py-3 rounded-lg font-semibold tracking-wider">
+                        CONTRATAR AGORA
+                    </button>
+                </div>
+                
+                <!-- Plano 16 Cores -->
+                <div class="pricing-card card p-6 rounded-2xl">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2">VPS EMPRESARIAL</h3>
+                        <div class="original-price">R$389,90/mês</div>
+                        <div class="discount-price">R$259,90/mês</div>
+                        <div class="savings-badge mt-2">Economize 33%</div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-green-500 mr-3'></i>
+                            <span>16 Cores</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-green-500 mr-3'></i>
+                            <span>64GB RAM</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-green-500 mr-3'></i>
+                            <span>350GB SSD NVMe</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-green-500 mr-3'></i>
+                            <span>1Gbps Ilimitado</span>
+                        </li>
+                    </ul>
+                    <button class="btn w-full py-3 rounded-lg font-semibold tracking-wider">
+                        CONTRATAR AGORA
+                    </button>
+                </div>
+                
+                <!-- Plano 24 Cores -->
+                <div class="pricing-card card p-6 rounded-2xl">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2">VPS PREMIUM</h3>
+                        <div class="original-price">R$519,00/mês</div>
+                        <div class="discount-price">R$332,90/mês</div>
+                        <div class="savings-badge mt-2">Economize 36%</div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-green-500 mr-3'></i>
+                            <span>24 Cores</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-green-500 mr-3'></i>
+                            <span>96GB RAM</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-green-500 mr-3'></i>
+                            <span>400GB SSD NVMe</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-green-500 mr-3'></i>
+                            <span>1Gbps Ilimitado</span>
+                        </li>
+                    </ul>
+                    <button class="btn w-full py-3 rounded-lg font-semibold tracking-wider">
+                        CONTRATAR AGORA
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-20 bg-[#0a0a0a]">
+    <section class="py-20">
         <div class="container mx-auto px-4">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-wide">BENEFÍCIOS DOS NOSSOS <span class="highlight">SERVIDORES DEDICADOS</span></h2>
-                <p class="text-[#cccccc] text-lg">Tecnologia de ponta para oferecer a melhor experiência de hospedagem dedicada</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-wide">TODOS OS PLANOS <span class="highlight">INCLUÍDOS</span></h2>
+                <p class="text-[#cccccc] text-lg">Benefícios exclusivos para todos os clientes VPS EUA</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="card p-6 rounded-xl text-center">
-                    <div class="w-14 h-14 rounded-xl bg-black border border-[#222222] flex items-center justify-center mx-auto mb-4 neon-border">
-                        <i class='bx bx-chip text-2xl text-white'></i>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+                <div class="card p-6 rounded-xl">
+                    <div class="w-12 h-12 rounded-xl bg-black border border-[#222222] flex items-center justify-center mb-4 neon-border">
+                        <i class='bx bx-rocket text-xl text-white'></i>
                     </div>
-                    <h3 class="font-bold text-lg mb-2">Processadores de Última Geração</h3>
-                    <p class="text-[#aaaaaa] text-sm">AMD Ryzen e Intel Xeon para máxima performance</p>
+                    <h3 class="font-bold text-lg mb-2">1Gbps Ilimitado</h3>
+                    <p class="text-[#aaaaaa]">
+                        Tráfego de rede ilimitado com conexão dedicada de 1Gbps para máxima performance.
+                    </p>
                 </div>
-                <div class="card p-6 rounded-xl text-center">
-                    <div class="w-14 h-14 rounded-xl bg-black border border-[#222222] flex items-center justify-center mx-auto mb-4 neon-border">
-                        <i class='bx bx-memory-card text-2xl text-white'></i>
+                <div class="card p-6 rounded-xl">
+                    <div class="w-12 h-12 rounded-xl bg-black border border-[#222222] flex items-center justify-center mb-4 neon-border">
+                        <i class='bx bx-shield-quarter text-xl text-white'></i>
                     </div>
-                    <h3 class="font-bold text-lg mb-2">RAM Expansível</h3>
-                    <p class="text-[#aaaaaa] text-sm">Até 256GB de memória RAM DDR4</p>
+                    <h3 class="font-bold text-lg mb-2">Proteção Anti-DDoS</h3>
+                    <p class="text-[#aaaaaa]">
+                        Proteção especializada contra ataques DDoS para manter seus serviços sempre online.
+                    </p>
                 </div>
-                <div class="card p-6 rounded-xl text-center">
-                    <div class="w-14 h-14 rounded-xl bg-black border border-[#222222] flex items-center justify-center mx-auto mb-4 neon-border">
-                        <i class='bx bx-hdd text-2xl text-white'></i>
+                <div class="card p-6 rounded-xl">
+                    <div class="w-12 h-12 rounded-xl bg-black border border-[#222222] flex items-center justify-center mb-4 neon-border">
+                        <i class='bx bx-hdd text-xl text-white'></i>
                     </div>
-                    <h3 class="font-bold text-lg mb-2">Armazenamento SSD/HDD</h3>
-                    <p class="text-[#aaaaaa] text-sm">Opções de SSD NVMe e HDD SATA para suas necessidades</p>
+                    <h3 class="font-bold text-lg mb-2">SSD NVMe</h3>
+                    <p class="text-[#aaaaaa]">
+                        Armazenamento em SSD NVMe de última geração para velocidade máxima de leitura e escrita.
+                    </p>
                 </div>
-                <div class="card p-6 rounded-xl text-center">
-                    <div class="w-14 h-14 rounded-xl bg-black border border-[#222222] flex items-center justify-center mx-auto mb-4 neon-border">
-                        <i class='bx bx-shield-quarter text-2xl text-white'></i>
+                <div class="card p-6 rounded-xl">
+                    <div class="w-12 h-12 rounded-xl bg-black border border-[#222222] flex items-center justify-center mb-4 neon-border">
+                        <i class='bx bx-world text-xl text-white'></i>
                     </div>
-                    <h3 class="font-bold text-lg mb-2">Proteção DDoS</h3>
-                    <p class="text-[#aaaaaa] text-sm">Proteção avançada contra ataques DDoS</p>
+                    <h3 class="font-bold text-lg mb-2">Baixa Latência</h3>
+                    <p class="text-[#aaaaaa]">
+                        Ping médio de 120ms entre EUA e Brasil, ideal para servidores internacionais.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Network Info -->
-    <section class="py-16">
+    <!-- Performance Info -->
+    <section class="py-16 bg-[#0a0a0a]">
         <div class="container mx-auto px-4">
             <div class="card p-8 rounded-2xl max-w-4xl mx-auto">
                 <div class="flex flex-col md:flex-row items-center">
-                    <div class="md:w-1/3 mb-6 md:mb-0 flex justify-center">
+                    <div class="md:w-1/4 mb-6 md:mb-0 flex justify-center">
                         <div class="text-6xl">📶</div>
                     </div>
-                    <div class="md:w-2/3 text-center md:text-left">
+                    <div class="md:w-3/4 text-center md:text-left">
                         <h2 class="text-2xl font-bold mb-4">Conectividade Global Premium</h2>
                         <p class="text-[#cccccc] mb-4">
-                            Nossos servidores dedicados nos EUA estão localizados em datacenters Tier III com conectividade 
+                            Nossos servidores VPS EUA estão localizados em datacenters Tier III com conectividade 
                             redundante a múltiplos provedores de internet, garantindo uptime máximo e baixa latência 
                             para servidores internacionais.
                         </p>
@@ -573,13 +579,13 @@
         <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0gNDAgMCBMIDAgMCBMIDAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')]"></div>
         <div class="container mx-auto px-4 relative z-10">
             <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 tracking-wide">PRONTO PARA EXPERIMENTAR A <span class="highlight">MELHOR INFRAESTRUTURA DEDICADA</span>?</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 tracking-wide">PRONTO PARA EXPERIMENTAR A <span class="highlight">MELHOR VPS</span> NOS EUA?</h2>
                 <p class="text-xl text-[#cccccc] mb-10">
-                    Junte-se a centenas de clientes que já escolheram a Rede Gamer para sua infraestrutura dedicada nos EUA.
+                    Junte-se a centenas de clientes que já escolheram a Rede Gamer para sua infraestrutura internacional.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
                     <button class="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center tracking-wider">
-                        ESCOLHER SERVIDOR DEDICADO
+                        ESCOLHER PLANO VPS
                         <i class='bx bx-right-arrow-alt ml-2 text-xl'></i>
                     </button>
                     <button class="btn text-white px-8 py-4 rounded-xl font-bold text-lg tracking-wider">

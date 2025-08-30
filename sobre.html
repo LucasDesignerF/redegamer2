@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Rede Gamer Hospedagens</title>
+    <meta name="description" content="Conheça a história da Rede Gamer Hospedagens, fundada em 2016 por Lucas Fortes e Caio Miranda (Cailir). Especialistas em hospedagem gamer no Brasil e EUA.">
+    <meta name="keywords" content="rede gamer, sobre nós, história, hospedagem gamer, vps, servidores dedicados, lucas fortes, caio miranda, cailir">
+    <meta name="author" content="Rede Gamer Hospedagens">
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        black: {
+                            900: '#000000',
+                            800: '#0a0a0a',
+                            700: '#111111',
+                            600: '#1a1a1a',
+                            500: '#222222',
+                            400: '#333333',
+                            300: '#444444',
+                            200: '#555555',
+                            100: '#666666'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 1px;
+        }
+        .card {
+            background: linear-gradient(145deg, #0a0a0a, #000000);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+        }
+        .btn {
+            background: linear-gradient(90deg, #111111, #0a0a0a);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: 0.5s;
+        }
+        .btn:hover::before {
+            left: 100%;
+        }
+        .btn:hover {
+            background: linear-gradient(90deg, #1a1a1a, #111111);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #000000, #111111);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .btn-primary:hover {
+            background: linear-gradient(90deg, #111111, #000000);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .neon-border {
+            position: relative;
+            background: #000000;
+        }
+        .neon-border::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+            z-index: -1;
+        }
+        .highlight {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        .glow-text {
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+        }
+        .founder-card {
+            transition: all 0.3s ease;
+        }
+        .founder-card:hover {
+            transform: translateY(-10px);
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        .timeline-content {
+            padding: 20px;
+            background: rgba(17, 17, 17, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            position: relative;
+        }
+        .timeline-content::after {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: #111111;
+            border: 3px solid #333333;
+            top: 25px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-item:nth-child(odd) .timeline-content::after {
+            right: -23px;
+        }
+        .timeline-item:nth-child(even) .timeline-content::after {
+            left: -23px;
+        }
+        .timeline-item:nth-child(odd) .timeline-content {
+            text-align: right;
+        }
+        .timeline-year {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            .timeline-item:nth-child(odd) .timeline-content::after,
+            .timeline-item:nth-child(even) .timeline-content::after {
+                left: 15px;
+            }
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-[#1a1a1a]">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-xl bg-black border border-[#222222] flex items-center justify-center neon-border">
+                    <i class='bx bx-server text-white text-2xl glow'></i>
+                </div>
+                <span class="text-2xl font-bold tracking-wider">REDE <span class="glow-text">GAMER</span></span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-white transition-all duration-300 font-medium tracking-wider relative group">
+                    <i class='bx bx-home-alt mr-1'></i> INÍCIO
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                
+                <!-- Dropdown Menu for VPS -->
+                <div class="relative group">
+                    <a href="#" class="hover:text-white transition-all duration-300 font-medium tracking-wider relative group flex items-center">
+                        <i class='bx bx-server mr-1'></i> SERVIDORES VPS
+                        <i class='bx bx-chevron-down text-lg ml-1 transition-transform duration-300 group-hover:rotate-180'></i>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <div class="absolute hidden group-hover:block bg-[#0a0a0a] border border-[#222222] rounded-lg mt-2 py-2 w-48 z-50">
+                        <a href="vps-br.html" class="block px-4 py-2 hover:bg-[#111111] flex items-center">
+                            <span class="mr-2">🇧🇷</span> VPS Brasil
+                        </a>
+                        <a href="vps-eua.html" class="block px-4 py-2 hover:bg-[#111111] flex items-center">
+                            <span class="mr-2">🇺🇸</span> VPS EUA
+                        </a>
+                    </div>
+                </div>
+                
+                <a href="dedicado.html" class="hover:text-white transition-all duration-300 font-medium tracking-wider relative group">
+                    <i class='bx bx-hard-drive mr-1'></i> SERVIDORES DEDICADOS
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="colocation.html" class="hover:text-white transition-all duration-300 font-medium tracking-wider relative group">
+                    <i class='bx bx-data mr-1'></i> COLOCATION
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#" class="hover:text-white transition-all duration-300 font-medium tracking-wider relative group">
+                    <i class='bx bx-support mr-1'></i> SUPORTE
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#" class="hover:text-white transition-all duration-300 font-medium tracking-wider relative group">
+                    <i class='bx bx-envelope mr-1'></i> CONTATO
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button class="hidden md:block btn text-white px-6 py-2.5 rounded-xl font-semibold text-sm tracking-wider">
+                    <i class='bx bx-user-circle mr-1'></i> ÁREA DO CLIENTE
+                </button>
+                <button id="menu-toggle" class="md:hidden text-2xl text-white">
+                    <i class='bx bx-menu'></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black py-4 px-4 border-t border-[#1a1a1a]">
+            <div class="flex flex-col space-y-4">
+                <a href="index.html" class="hover:text-white transition py-2 font-medium tracking-wider">
+                    <i class='bx bx-home-alt mr-1'></i> INÍCIO
+                </a>
+                
+                <!-- Mobile VPS Links -->
+                <a href="vps-br.html" class="hover:text-white transition py-2 font-medium tracking-wider flex items-center">
+                    <span class="mr-2">🇧🇷</span> VPS BRASIL
+                </a>
+                <a href="vps-eua.html" class="hover:text-white transition py-2 font-medium tracking-wider flex items-center">
+                    <span class="mr-2">🇺🇸</span> VPS EUA
+                </a>
+                
+                <a href="dedicado.html" class="hover:text-white transition py-2 font-medium tracking-wider">
+                    <i class='bx bx-hard-drive mr-1'></i> SERVIDORES DEDICADOS
+                </a>
+                <a href="colocation.html" class="hover:text-white transition py-2 font-medium tracking-wider">
+                    <i class='bx bx-data mr-1'></i> COLOCATION
+                </a>
+                <a href="#" class="hover:text-white transition py-2 font-medium tracking-wider">
+                    <i class='bx bx-support mr-1'></i> SUPORTE
+                </a>
+                <a href="#" class="hover:text-white transition py-2 font-medium tracking-wider">
+                    <i class='bx bx-envelope mr-1'></i> CONTATO
+                </a>
+                <button class="btn text-white px-6 py-2.5 rounded-xl font-semibold mt-2 tracking-wider">
+                    <i class='bx bx-user-circle mr-1'></i> ÁREA DO CLIENTE
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-br from-black to-[#0a0a0a] relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0gNDAgMCBMIDAgMCBMIDAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')]"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <div class="inline-block mb-4 px-4 py-1 bg-[#111111] border border-[#222222] rounded-full text-sm font-medium tracking-wider">
+                    <span class="text-[#aaaaaa]">NOSSA HISTÓRIA</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 tracking-wide">
+                    A JORNADA DA <span class="highlight">REDE GAMER</span>
+                </h1>
+                <p class="text-xl text-[#cccccc] max-w-2xl mx-auto mb-8">
+                    Desde 2016 proporcionando soluções de hospedagem de alta performance para a comunidade gamer.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="card p-8 rounded-2xl">
+                    <h2 class="text-3xl font-bold mb-6 tracking-wide">NOSSA HISTÓRIA</h2>
+                    <p class="text-[#cccccc] mb-6">
+                        A Rede Gamer foi fundada em 2016 por <span class="font-bold text-white">Lucas Fortes</span>, com a visão de oferecer 
+                        soluções de hospedagem de alta performance para a comunidade gamer brasileira. Logo no início, 
+                        Lucas foi acompanhado por seu sócio e parceiro comercial, <span class="font-bold text-white">Caio Miranda (Cailir)</span>, 
+                        que compartilhava da mesma paixão por tecnologia e games.
+                    </p>
+                    <p class="text-[#cccccc] mb-6">
+                        Nos anos seguintes, a empresa cresceu consistentemente, construindo uma base sólida de clientes 
+                        e uma reputação de confiabilidade. Nosso auge ocorreu durante a pandemia de 2020-2021, quando 
+                        houve um aumento significativo na demanda por servidores dedicados para comunidades de games 
+                        como MTA, SA-MP e FiveM. Durante esse período, expandimos nossa infraestrutura e equipe para 
+                        atender a essa crescente demanda.
+                    </p>
+                    <p class="text-[#cccccc] mb-6">
+                        Infelizmente, em 2023, tomamos a difícil decisão de encerrar as operações devido a desafios do mercado. 
+                        No entanto, nossa paixão pela tecnologia e pelo universo gamer nunca diminuiu. No final de 2024, 
+                        decidimos retornar com uma proposta ainda mais sólida e inovadora.
+                    </p>
+                    <p class="text-[#cccccc] mb-6">
+                        Hoje, a Rede Gamer está mais forte do que nunca. Nosso foco está direcionado para a hospedagem B2C, 
+                        oferecendo soluções personalizadas para gamers e pequenos streamers. Contamos com infraestrutura 
+                        própria no Brasil e parcerias estratégicas nos Estados Unidos, permitindo que ofereçamos:
+                    </p>
+                    <ul class="space-y-3 mb-6 text-[#cccccc]">
+                        <li class="flex items-start">
+                            <i class='bx bx-check-circle text-white mt-1 mr-3'></i>
+                            <span>Servidores VPS e Colocation no Brasil com baixa latência</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class='bx bx-check-circle text-white mt-1 mr-3'></i>
+                            <span>Servidores Dedicados de alta performance nos EUA</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class='bx bx-check-circle text-white mt-1 mr-3'></i>
+                            <span>Suporte especializado 24/7</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class='bx bx-check-circle text-white mt-1 mr-3'></i>
+                            <span>Infraestrutura moderna e segura</span>
+                        </li>
+                    </ul>
+                    <p class="text-[#cccccc]">
+                        Estamos comprometidos em continuar evoluindo e oferecendo as melhores soluções para nossa comunidade. 
+                        Nosso objetivo é ser referência em hospedagem gamer, combinando tecnologia de ponta com um atendimento 
+                        humano e especializado.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founders Section -->
+    <section class="py-20 bg-[#0a0a0a]">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-wide">NOSSOS <span class="highlight">FUNDADORES</span></h2>
+                <p class="text-[#cccccc] text-lg">Conheça as mentes por trás da Rede Gamer</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Lucas Fortes -->
+                <div class="founder-card card p-6 rounded-xl">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-24 h-24 rounded-full bg-black border border-[#222222] flex items-center justify-center mb-6 neon-border">
+                            <span class="text-3xl font-bold">LF</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Lucas Fortes</h3>
+                        <p class="text-[#aaaaaa] mb-4">Fundador & CEO</p>
+                        <p class="text-[#cccccc] text-sm">
+                            Visionário por trás da Rede Gamer, Lucas iniciou o projeto em 2016 com o objetivo de 
+                            oferecer hospedagem de alta performance para a comunidade gamer brasileira. Sua paixão 
+                            por tecnologia e games é o motor que impulsiona a empresa.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Caio Miranda (Cailir) -->
+                <div class="founder-card card p-6 rounded-xl">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-24 h-24 rounded-full bg-black border border-[#222222] flex items-center justify-center mb-6 neon-border">
+                            <span class="text-3xl font-bold">CM</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Caio Miranda</h3>
+                        <p class="text-[#aaaaaa] mb-4">Sócio & Diretor Comercial (Cailir)</p>
+                        <p class="text-[#cccccc] text-sm">
+                            Parceiro comercial e sócio fundador da Rede Gamer. Caio, conhecido como Cailir, 
+                            compartilha da mesma paixão por tecnologia e games de Lucas. Sua expertise em 
+                            desenvolvimento de negócios e relacionamento com clientes é fundamental para o 
+                            crescimento da empresa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-wide">LINHA DO <span class="highlight">TEMPO</span></h2>
+                <p class="text-[#cccccc] text-lg">Os principais marcos da nossa jornada</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2016</span>
+                        <h3 class="text-xl font-bold mb-2">Fundação</h3>
+                        <p class="text-[#cccccc]">Lucas Fortes funda a Rede Gamer com o objetivo de oferecer hospedagem de alta performance para gamers brasileiros.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2017-2019</span>
+                        <h3 class="text-xl font-bold mb-2">Crescimento Sólido</h3>
+                        <p class="text-[#cccccc]">Construção de uma base sólida de clientes e reputação no mercado de hospedagem gamer.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2020-2021</span>
+                        <h3 class="text-xl font-bold mb-2">Auge Pandêmico</h3>
+                        <p class="text-[#cccccc]">Expansão significativa durante a pandemia, atendendo comunidades de MTA, SA-MP e FiveM com servidores dedicados.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2022</span>
+                        <h3 class="text-xl font-bold mb-2">Consolidação</h3>
+                        <p class="text-[#cccccc]">Consolidação da infraestrutura e parcerias estratégicas para oferecer serviços ainda melhores.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2023</span>
+                        <h3 class="text-xl font-bold mb-2">Interrupção Temporária</h3>
+                        <p class="text-[#cccccc]">Encerramento das operações devido a desafios do mercado, mas mantendo a paixão pela tecnologia.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">Final de 2024</span>
+                        <h3 class="text-xl font-bold mb-2">Retorno Triunfante</h3>
+                        <p class="text-[#cccccc]">Retorno da Rede Gamer com uma proposta renovada, infraestrutura própria no Brasil e parcerias nos EUA.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2025</span>
+                        <h3 class="text-xl font-bold mb-2">Nova Era</h3>
+                        <p class="text-[#cccccc]">Estabelecimento como referência em hospedagem gamer B2C com soluções personalizadas e suporte especializado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="py-20 bg-[#0a0a0a]">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="card p-8 rounded-2xl">
+                    <div class="w-16 h-16 rounded-xl bg-black border border-[#222222] flex items-center justify-center mb-6 neon-border">
+                        <i class='bx bx-target-lock text-2xl text-white'></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 tracking-wide">NOSSA MISSÃO</h3>
+                    <p class="text-[#cccccc]">
+                        Proporcionar soluções de hospedagem de alta performance e confiabilidade para gamers e 
+                        desenvolvedores, permitindo que eles se concentrem no que realmente importa: criar e 
+                        desfrutar de experiências de jogo excepcionais. Queremos democratizar o acesso a 
+                        infraestrutura de qualidade no Brasil e no mundo.
+                    </p>
+                </div>
+                
+                <div class="card p-8 rounded-2xl">
+                    <div class="w-16 h-16 rounded-xl bg-black border border-[#222222] flex items-center justify-center mb-6 neon-border">
+                        <i class='bx bx-show text-2xl text-white'></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 tracking-wide">NOSSA VISÃO</h3>
+                    <p class="text-[#cccccc]">
+                        Ser reconhecida como a principal provedora de hospedagem gamer no Brasil e uma referência 
+                        global em soluções personalizadas. Almejamos construir uma comunidade forte onde 
+                        tecnologia, inovação e paixão pelos games se encontram para criar experiências únicas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full bg-[#0a0a0a]"></div>
+        <div class="absolute top-20 left-10 w-64 h-64 bg-[#0a0a0a] rounded-full filter blur-3xl opacity-30"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-[#0a0a0a] rounded-full filter blur-3xl opacity-30"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 tracking-wide">FAÇA PARTE DA <span class="highlight">NOSSA HISTÓRIA</span></h2>
+                <p class="text-xl text-[#cccccc] mb-10">
+                    Junte-se a nós nesta nova era da hospedagem gamer.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button class="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center tracking-wider">
+                        CONHEÇA NOSSOS SERVIÇOS
+                        <i class='bx bx-right-arrow-alt ml-2 text-xl'></i>
+                    </button>
+                    <button class="btn text-white px-8 py-4 rounded-xl font-bold text-lg tracking-wider">
+                        ENTRE EM CONTATO
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-[#1a1a1a] pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-black border border-[#222222] flex items-center justify-center neon-border">
+                            <i class='bx bx-server text-white text-2xl'></i>
+                        </div>
+                        <span class="text-2xl font-bold tracking-wider">REDE <span class="glow-text">GAMER</span></span>
+                    </div>
+                    <p class="text-[#aaaaaa] mb-6">Hospedagem de alta performance para gamers desde 2016.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-12 h-12 rounded-full bg-[#0a0a0a] border border-[#222222] flex items-center justify-center hover:bg-[#111111] transition neon-border">
+                            <i class='bx bxl-facebook text-xl'></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 rounded-full bg-[#0a0a0a] border border-[#222222] flex items-center justify-center hover:bg-[#111111] transition neon-border">
+                            <i class='bx bxl-twitter text-xl'></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 rounded-full bg-[#0a0a0a] border border-[#222222] flex items-center justify-center hover:bg-[#111111] transition neon-border">
+                            <i class='bx bxl-instagram text-xl'></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 rounded-full bg-[#0a0a0a] border border-[#222222] flex items-center justify-center hover:bg-[#111111] transition neon-border">
+                            <i class='bx bxl-linkedin text-xl'></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6 tracking-wider">SERVIÇOS</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-[#aaaaaa] hover:text-white transition flex items-center">
+                            <i class='bx bx-home-alt mr-2'></i> INÍCIO
+                        </a></li>
+                        <li><a href="vps-br.html" class="text-[#aaaaaa] hover:text-white transition flex items-center">
+                            <span class="mr-2">🇧🇷</span> VPS BRASIL
+                        </a></li>
+                        <li><a href="vps-eua.html" class="text-[#aaaaaa] hover:text-white transition flex items-center">
+                            <span class="mr-2">🇺🇸</span> VPS EUA
+                        </a></li>
+                        <li><a href="dedicado.html" class="text-[#aaaaaa] hover:text-white transition flex items-center">
+                            <i class='bx bx-hard-drive mr-2'></i> SERVIDORES DEDICADOS
+                        </a></li>
+                        <li><a href="colocation.html" class="text-[#aaaaaa] hover:text-white transition flex items-center">
+                            <i class='bx bx-data mr-2'></i> COLOCATION
+                        </a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6 tracking-wider">EMPRESA</h4>
+                    <ul class="space-y-3">
+                        <li><a href="sobre.html" class="text-[#aaaaaa] hover:text-white transition">Sobre Nós</a></li>
+                        <li><a href="datacenters.html" class="text-[#aaaaaa] hover:text-white transition">Datacenters</a></li>
+                        <li><a href="carreiras.html" class="text-[#aaaaaa] hover:text-white transition">Carreiras</a></li>
+                        <li><a href="#" class="text-[#aaaaaa] hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-[#aaaaaa] hover:text-white transition">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6 tracking-wider">CONTATO</h4>
+                    <ul class="space-y-4 text-[#aaaaaa]">
+                        <li class="flex items-start">
+                            <i class='bx bx-envelope text-white mt-1 mr-3'></i>
+                            <span>contato@rededgamer.com.br</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class='bx bx-phone text-white mt-1 mr-3'></i>
+                            <span>+55 (11) 99999-9999</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class='bx bx-support text-white mt-1 mr-3'></i>
+                            <span>Suporte 24/7: suporte@rededgamer.com.br</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class='bx bx-map text-white mt-1 mr-3'></i>
+                            <span>São Paulo, Brasil</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-[#1a1a1a] text-center text-[#666666] text-sm">
+                <p>&copy; <span id="current-year">2025</span> REDE GAMER HOSPEDAGENS. TODOS OS DIREITOS RESERVADOS.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
