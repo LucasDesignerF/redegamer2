@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rede Gamer Hospedagens - VPS e Servidores Dedicados no Brasil e EUA. Uptime de 99.99%, mais de 40 servidores online. Fundada em 2016.">
+    <meta name="keywords" content="hospedagem, vps, servidor dedicado, brasil, eua, gaming, rede gamer, hosting">
+    <meta name="author" content="Rede Gamer Hospedagens">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rededgamer.com.br/">
+    <meta property="og:title" content="Rede Gamer Hospedagens - VPS e Servidores Dedicados">
+    <meta property="og:description" content="Hospedagem de alta performance no Brasil e EUA com uptime de 99.99%. Mais de 40 servidores online.">
+    <meta property="og:image" content="https://rededgamer.com.br/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://rededgamer.com.br/">
+    <meta property="twitter:title" content="Rede Gamer Hospedagens - VPS e Servidores Dedicados">
+    <meta property="twitter:description" content="Hospedagem de alta performance no Brasil e EUA com uptime de 99.99%. Mais de 40 servidores online.">
+    <meta property="twitter:image" content="https://rededgamer.com.br/images/og-image.jpg">
+    
+    <title>Rede Gamer Hospedagens - VPS e Servidores Dedicados</title>
+    
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        black: {
+                            900: '#000000',
+                            800: '#0a0a0a',
+                            700: '#111111',
+                            600: '#1a1a1a',
+                            500: '#222222',
+                            400: '#333333',
+                            300: '#444444',
+                            200: '#555555',
+                            100: '#666666'
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 5px rgba(255,255,255,0.2)' },
+                            '100%': { boxShadow: '0 0 20px rgba(255,255,255,0.4)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+        }
+        
+        .hero-bg {
+            background: radial-gradient(circle at 20% 50%, rgba(34, 34, 34, 0.3) 0%, rgba(0, 0, 0, 0) 30%),
+                        radial-gradient(circle at 80% 20%, rgba(34, 34, 34, 0.3) 0%, rgba(0, 0, 0, 0) 30%),
+                        #000000;
+        }
+        
+        .card {
+            background: linear-gradient(145deg, #0a0a0a, #000000);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+        }
+        
+        .btn {
+            background: linear-gradient(90deg, #111111, #0a0a0a);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: 0.5s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn:hover {
+            background: linear-gradient(90deg, #1a1a1a, #111111);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, #000000, #111111);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(90deg, #111111, #000000);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .neon-border {
+            position: relative;
+            background: #000000;
+        }
+        
+        .neon-border::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+            z-index: -1;
+        }
+        
+        .highlight {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        
+        .glow-text {
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            margin: 3rem 0;
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .glow {
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        
+        .hologram {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hologram::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transform: rotate(45deg);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        /* Timeline styling */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background: rgba(17, 17, 17, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            position: relative;
+        }
+        
+        .timeline-content::after {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: #111111;
+            border: 3px solid #333333;
+            top: 25px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content::after {
+            right: -23px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content::after {
+            left: -23px;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            text-align: right;
+        }
+        
+        .timeline-year {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(#222222, #333333);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(#333333, #444444);
+        }
+        
+        /* Custom animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+            }
+            
+            .hero-text, .hero-visual {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .hero-visual {
+                margin-top: 2rem;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content::after,
+            .timeline-item:nth-child(even) .timeline-content::after {
+                left: 15px;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-[#1a1a1a]">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-xl bg-black border border-[#222222] flex items-center justify-center neon-border">
+                    <i class='bx bx-server text-white text-2xl glow'></i>
+                </div>
+                <span class="text-2xl font-bold tracking-wider">REDE <span class="glow-text">GAMER</span></span>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="hover:text-white transition-all duration-300 font-medium tracking-wider relative group">
+                    INÍCIO
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="vps.html" class="hover:text-white transition-all duration-300 font-medium tracking-wider relative group">
+                    VPS
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="dedicado.html" class="hover:text-white transition-all duration-300 font-medium tracking-wider relative group">
+                    DEDICADOS
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#" class="hover:text-white transition-all duration-300 font-medium tracking-wider relative group">
+                    SUPORTE
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#" class="hover:text-white transition-all duration-300 font-medium tracking-wider relative group">
+                    CONTATO
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <button class="hidden md:block btn text-white px-6 py-2.5 rounded-xl font-semibold text-sm tracking-wider">ÁREA DO CLIENTE</button>
+                <button id="menu-toggle" class="md:hidden text-2xl text-white">
+                    <i class='bx bx-menu'></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black py-4 px-4 border-t border-[#1a1a1a]">
+            <div class="flex flex-col space-y-4">
+                <a href="#" class="hover:text-white transition py-2 font-medium tracking-wider">INÍCIO</a>
+                <a href="vps.html" class="hover:text-white transition py-2 font-medium tracking-wider">VPS</a>
+                <a href="dedicado.html" class="hover:text-white transition py-2 font-medium tracking-wider">DEDICADOS</a>
+                <a href="#" class="hover:text-white transition py-2 font-medium tracking-wider">SUPORTE</a>
+                <a href="#" class="hover:text-white transition py-2 font-medium tracking-wider">CONTATO</a>
+                <button class="btn text-white px-6 py-2.5 rounded-xl font-semibold mt-2 tracking-wider">ÁREA DO CLIENTE</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-20 md:py-28 relative overflow-hidden grid-pattern">
+        <div class="absolute top-20 left-10 w-64 h-64 bg-[#0a0a0a] rounded-full filter blur-3xl opacity-50"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-[#0a0a0a] rounded-full filter blur-3xl opacity-50"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row items-center hero-content">
+                <div class="md:w-1/2 mb-12 md:mb-0 hero-text">
+                    <div class="inline-block mb-4 px-4 py-1 bg-[#111111] border border-[#222222] rounded-full text-sm font-medium tracking-wider">
+                        <span class="text-[#aaaaaa]">INFRAESTRUTURA DE 2025</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 tracking-wide">
+                        HOSPEDAGEM DE <span class="highlight">ALTA PERFORMANCE</span> PARA GAMERS
+                    </h1>
+                    <p class="text-xl text-[#cccccc] max-w-lg mb-8">
+                        Infraestrutura otimizada para jogos com servidores no Brasil e EUA. Uptime de 99.99% garantido.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center tracking-wider">
+                            CONHEÇA NOSSA INFRA
+                            <i class='bx bx-right-arrow-alt ml-2 text-xl'></i>
+                        </button>
+                        <button class="btn text-white px-8 py-4 rounded-xl font-bold text-lg tracking-wider">
+                            NOSSA HISTÓRIA
+                        </button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center hero-visual">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-black border border-[#222222] p-1 floating hologram">
+                            <div class="w-full h-full rounded-2xl bg-[#0a0a0a] flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class='bx bx-server text-7xl text-white mb-4 glow'></i>
+                                    <h3 class="text-2xl font-bold mb-2 tracking-wider">INFRAESTRUTURA GAMER</h3>
+                                    <p class="text-[#aaaaaa]">OTIMIZADA PARA MÁXIMA PERFORMANCE</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -top-4 -right-4 w-24 h-24 rounded-xl bg-black border border-[#333333] p-0.5 rotate-12 neon-border">
+                            <div class="w-full h-full rounded-xl bg-[#0a0a0a] flex items-center justify-center">
+                                <span class="text-xl font-bold highlight">99.99%</span>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 w-32 h-32 rounded-xl bg-black border border-[#333333] p-0.5 -rotate-12 neon-border">
+                            <div class="w-full h-full rounded-xl bg-[#0a0a0a] flex items-center justify-center">
+                                <span class="text-xl font-bold">40+ <br><span class="text-sm text-[#aaaaaa]">SERVIDORES</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-[#0a0a0a] border-y border-[#1a1a1a]">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6 group animate-fadeInUp">
+                    <div class="text-5xl font-bold highlight mb-3 group-hover:scale-110 transition-transform duration-300">40+</div>
+                    <div class="text-[#aaaaaa] font-medium tracking-wider">SERVIDORES ONLINE</div>
+                </div>
+                <div class="p-6 group animate-fadeInUp">
+                    <div class="text-5xl font-bold highlight mb-3 group-hover:scale-110 transition-transform duration-300">20+</div>
+                    <div class="text-[#aaaaaa] font-medium tracking-wider">CLIENTES ATIVOS</div>
+                </div>
+                <div class="p-6 group animate-fadeInUp">
+                    <div class="text-5xl font-bold highlight mb-3 group-hover:scale-110 transition-transform duration-300">99.99%</div>
+                    <div class="text-[#aaaaaa] font-medium tracking-wider">UPTIME GARANTIDO</div>
+                </div>
+                <div class="p-6 group animate-fadeInUp">
+                    <div class="text-5xl font-bold highlight mb-3 group-hover:scale-110 transition-transform duration-300">2016</div>
+                    <div class="text-[#aaaaaa] font-medium tracking-wider">ANO DE FUNDAÇÃO</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-wide">A HISTÓRIA DA <span class="highlight">REDE GAMER</span></h2>
+                <p class="text-[#cccccc] text-lg">Desde 2016 proporcionando a melhor experiência de hospedagem para gamers brasileiros</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2016</span>
+                        <h3 class="text-xl font-bold mb-2">Fundação</h3>
+                        <p class="text-[#cccccc]">A Rede Gamer foi fundada por entusiastas de tecnologia e gamers com o objetivo de oferecer hospedagem de alta performance para a comunidade brasileira.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2018</span>
+                        <h3 class="text-xl font-bold mb-2">Primeiro Datacenter</h3>
+                        <p class="text-[#cccccc]">Inauguração do primeiro datacenter em São Paulo, com infraestrutura própria para atender a crescente demanda por servidores de jogos.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2020</span>
+                        <h3 class="text-xl font-bold mb-2">Expansão Internacional</h3>
+                        <p class="text-[#cccccc]">Parceria com datacenters nos EUA para oferecer soluções globais com baixa latência para servidores internacionais.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2022</span>
+                        <h3 class="text-xl font-bold mb-2">Inovação em Hardware</h3>
+                        <p class="text-[#cccccc]">Adoção de servidores com processadores AMD Ryzen de última geração, proporcionando desempenho superior para aplicações gaming.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2024</span>
+                        <h3 class="text-xl font-bold mb-2">Parceria com Ascenty</h3>
+                        <p class="text-[#cccccc]">Migração completa para os datacenters da Ascenty no Brasil, garantindo conectividade de primeira linha com os principais ISPs.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-year">2025</span>
+                        <h3 class="text-xl font-bold mb-2">Nova Era</h3>
+                        <p class="text-[#cccccc]">Lançamento da infraestrutura de próxima geração com suporte a até 64GB de RAM e processadores AMD Ryzen para máxima performance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infrastructure Section -->
+    <section class="py-20 bg-[#0a0a0a]">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-wide">NOSSA <span class="highlight">INFRAESTRUTURA</span></h2>
+                <p class="text-[#cccccc] text-lg">Tecnologia de ponta para oferecer a melhor experiência de hospedagem gamer</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="animate-fadeInUp">
+                    <h3 class="text-2xl font-bold mb-6 tracking-wider">PROCESSADORES AMD RYZEN</h3>
+                    <p class="text-[#cccccc] mb-6">Nossas VPS são equipadas com processadores AMD Ryzen de última geração, proporcionando desempenho excepcional para servidores de jogos e aplicações exigentes.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3 text-xl'></i>
+                            <span>Até 64GB de RAM</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3 text-xl'></i>
+                            <span>SSD NVMe de alta velocidade</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3 text-xl'></i>
+                            <span>Processadores de última geração</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3 text-xl'></i>
+                            <span>Conectividade premium</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-primary text-white px-6 py-3 rounded-lg font-semibold tracking-wider">
+                        CONHEÇA NOSSAS VPS
+                    </button>
+                </div>
+                
+                <div class="animate-fadeInUp">
+                    <div class="card p-8 rounded-2xl">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-xl bg-black border border-[#222222] flex items-center justify-center mr-4 neon-border">
+                                <i class='bx bx-chip text-2xl text-white glow'></i>
+                            </div>
+                            <h3 class="text-2xl font-bold tracking-wider">DATA CENTER ASCENTY</h3>
+                        </div>
+                        <p class="text-[#cccccc] mb-6">Nossos servidores estão hospedados nos datacenters da Ascenty em São Paulo, garantindo:</p>
+                        
+                        <ul class="space-y-4 mb-6">
+                            <li class="flex items-start">
+                                <i class='bx bx-check-circle text-white mt-1 mr-3'></i>
+                                <span>Conectividade direta com os principais ISPs brasileiros</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class='bx bx-check-circle text-white mt-1 mr-3'></i>
+                                <span>Redundância de rede e energia</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class='bx bx-check-circle text-white mt-1 mr-3'></i>
+                                <span>Proteção DDoS de última geração</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class='bx bx-check-circle text-white mt-1 mr-3'></i>
+                                <span>Ambiente com controle de temperatura e umidade</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="flex items-center mt-8">
+                            <div class="w-12 h-12 rounded-lg bg-black border border-[#222222] flex items-center justify-center mr-4">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0wIDE4Yy00LjQxIDAtOC0zLjU5LTgtOHMzLjU5LTggOC04IDggMy41OSA4IDgtMy41OSA4LTggOHptLTMtOWgydjdoLTJ2LTd6bTMtN2gydjE0aC0ydjE0eiIvPjwvc3ZnPg==" alt="Ascenty" class="w-8 h-8">
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Ascenty Data Centers</h4>
+                                <p class="text-[#aaaaaa] text-sm">São Paulo, Brasil</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-wide">POR QUE ESCOLHER A <span class="highlight">REDE GAMER</span>?</h2>
+                <p class="text-[#cccccc] text-lg">Infraestrutura de última geração otimizada para desempenho máximo em aplicações gaming.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card p-8 rounded-2xl animate-fadeInUp">
+                    <div class="w-16 h-16 rounded-xl bg-black border border-[#222222] flex items-center justify-center mb-6 neon-border">
+                        <i class='bx bx-rocket text-2xl text-white glow'></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 tracking-wider">ALTA PERFORMANCE</h3>
+                    <p class="text-[#cccccc] mb-6">Servidores otimizados com SSD NVMe e processadores AMD Ryzen de última geração para máxima performance.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>Processadores AMD Ryzen</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>Até 64GB de RAM DDR4</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>SSD NVMe de alta velocidade</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="card p-8 rounded-2xl animate-fadeInUp">
+                    <div class="w-16 h-16 rounded-xl bg-black border border-[#222222] flex items-center justify-center mb-6 neon-border">
+                        <i class='bx bx-shield-quarter text-2xl text-white glow'></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 tracking-wider">SEGURANÇA AVANÇADA</h3>
+                    <p class="text-[#cccccc] mb-6">Proteção DDoS, firewall avançado e backups automáticos para garantir a segurança dos seus dados.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>Proteção DDoS de 1Tbps</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>Firewall empresarial</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>Backups diários automáticos</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="card p-8 rounded-2xl animate-fadeInUp">
+                    <div class="w-16 h-16 rounded-xl bg-black border border-[#222222] flex items-center justify-center mb-6 neon-border">
+                        <i class='bx bx-world text-2xl text-white glow'></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 tracking-wider">LOCALIZAÇÕES ESTRATÉGICAS</h3>
+                    <p class="text-[#cccccc] mb-6">Datacenters no Brasil e nos EUA para baixa latência e melhor experiência para seus jogadores.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>Datacenter Ascenty - Brasil</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>Datacenter Ashburn - EUA</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>Conectividade global</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section class="py-20 bg-[#0a0a0a]">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-wide">LOCALIZAÇÕES DOS <span class="highlight">DATACENTERS</span></h2>
+                <p class="text-[#cccccc] text-lg">Escolha a localização que melhor atende suas necessidades de latência.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="card p-8 rounded-2xl animate-fadeInUp">
+                    <div class="flex items-center mb-6">
+                        <div class="text-4xl mr-4">🇧🇷</div>
+                        <div>
+                            <h3 class="text-2xl font-bold tracking-wider">BRASIL</h3>
+                            <p class="text-[#aaaaaa]">Datacenter Ascenty em São Paulo</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class='bx bx-check-circle text-white mt-1 mr-3'></i>
+                            <span>Latência baixa para jogadores brasileiros</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class='bx bx-check-circle text-white mt-1 mr-3'></i>
+                            <span>Conectividade com principais ISPs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class='bx bx-check-circle text-white mt-1 mr-3'></i>
+                            <span>Redundância de rede e energia</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class='bx bx-check-circle text-white mt-1 mr-3'></i>
+                            <span>Proteção DDoS local</span>
+                        </li>
+                    </ul>
+                    <button class="btn text-white py-3 rounded-lg font-semibold w-full tracking-wider">VER PLANOS VPS BRASIL</button>
+                </div>
+                
+                <div class="card p-8 rounded-2xl animate-fadeInUp">
+                    <div class="flex items-center mb-6">
+                        <div class="text-4xl mr-4">🇺🇸</div>
+                        <div>
+                            <h3 class="text-2xl font-bold tracking-wider">ESTADOS UNIDOS</h3>
+                            <p class="text-[#aaaaaa]">Datacenter em Ashburn, Virginia</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class='bx bx-check-circle text-white mt-1 mr-3'></i>
+                            <span>Conectividade com rede backbone global</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class='bx bx-check-circle text-white mt-1 mr-3'></i>
+                            <span>Ideal para servidores internacionais</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class='bx bx-check-circle text-white mt-1 mr-3'></i>
+                            <span>Alta disponibilidade</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class='bx bx-check-circle text-white mt-1 mr-3'></i>
+                            <span>100% energia renovável</span>
+                        </li>
+                    </ul>
+                    <button class="btn text-white py-3 rounded-lg font-semibold w-full tracking-wider">VER PLANOS VPS EUA</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-wide">O QUE NOSSOS <span class="highlight">CLIENTES</span> DIZEM</h2>
+                <p class="text-[#cccccc] text-lg">Veja o que os clientes da Rede Gamer têm a dizer sobre nossos serviços.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card p-8 rounded-2xl animate-fadeInUp">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full bg-black border border-[#222222] flex items-center justify-center mr-4 neon-border">
+                            <span class="font-bold text-lg">M</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg tracking-wider">MIGUEL SANTOS</h4>
+                            <div class="flex text-yellow-500">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-[#cccccc] italic">"A latência dos servidores no Brasil é impressionante. Meus jogadores notaram a diferença imediatamente! O suporte técnico é excepcional."</p>
+                </div>
+                
+                <div class="card p-8 rounded-2xl animate-fadeInUp">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full bg-black border border-[#222222] flex items-center justify-center mr-4 neon-border">
+                            <span class="font-bold text-lg">J</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg tracking-wider">JULIANA OLIVEIRA</h4>
+                            <div class="flex text-yellow-500">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star-half'></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-[#cccccc] italic">"Suporte técnico excelente e uptime perfeito. Recomendo para qualquer projeto de gaming. A migração foi tranquila e sem downtime."</p>
+                </div>
+                
+                <div class="card p-8 rounded-2xl animate-fadeInUp">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full bg-black border border-[#222222] flex items-center justify-center mr-4 neon-border">
+                            <span class="font-bold text-lg">R</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg tracking-wider">RICARDO ALMEIDA</h4>
+                            <div class="flex text-yellow-500">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-[#cccccc] italic">"Migrei meus servidores dedicados para a Rede Gamer e a performance melhorou consideravelmente. O custo-benefício é excelente!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full bg-[#0a0a0a]"></div>
+        <div class="absolute top-20 left-10 w-64 h-64 bg-[#0a0a0a] rounded-full filter blur-3xl opacity-30"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-[#0a0a0a] rounded-full filter blur-3xl opacity-30"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 tracking-wide">PRONTO PARA EXPERIMENTAR A <span class="highlight">MELHOR HOSPEDAGEM GAMER</span>?</h2>
+                <p class="text-xl text-[#cccccc] mb-10">Junte-se a mais de 20 clientes que já confiam na Rede Gamer para suas soluções de hospedagem.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button class="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center tracking-wider">
+                        CONHEÇA NOSSAS VPS
+                        <i class='bx bx-right-arrow-alt ml-2 text-xl'></i>
+                    </button>
+                    <button class="btn text-white px-8 py-4 rounded-xl font-bold text-lg tracking-wider">
+                        FALE COM UM ESPECIALISTA
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-[#1a1a1a] pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-black border border-[#222222] flex items-center justify-center neon-border">
+                            <i class='bx bx-server text-white text-2xl'></i>
+                        </div>
+                        <span class="text-2xl font-bold tracking-wider">REDE <span class="glow-text">GAMER</span></span>
+                    </div>
+                    <p class="text-[#aaaaaa] mb-6">Hospedagem de alta performance para gamers desde 2016.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-12 h-12 rounded-full bg-[#0a0a0a] border border-[#222222] flex items-center justify-center hover:bg-[#111111] transition neon-border">
+                            <i class='bx bxl-facebook text-xl'></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 rounded-full bg-[#0a0a0a] border border-[#222222] flex items-center justify-center hover:bg-[#111111] transition neon-border">
+                            <i class='bx bxl-twitter text-xl'></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 rounded-full bg-[#0a0a0a] border border-[#222222] flex items-center justify-center hover:bg-[#111111] transition neon-border">
+                            <i class='bx bxl-instagram text-xl'></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 rounded-full bg-[#0a0a0a] border border-[#222222] flex items-center justify-center hover:bg-[#111111] transition neon-border">
+                            <i class='bx bxl-linkedin text-xl'></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 tracking-wider">SERVIÇOS</h4>
+                    <ul class="space-y-3">
+                        <li><a href="vps.html" class="text-[#aaaaaa] hover:text-white transition">VPS Brasil</a></li>
+                        <li><a href="gaming.html" class="text-[#aaaaaa] hover:text-white transition">VPS EUA</a></li>
+                        <li><a href="dedicado.html" class="text-[#aaaaaa] hover:text-white transition">Servidores Dedicados</a></li>
+                        <li><a href="gaming.html" class="text-[#aaaaaa] hover:text-white transition">Cloud Gaming</a></li>
+                        <li><a href="#" class="text-[#aaaaaa] hover:text-white transition">Backup Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 tracking-wider">EMPRESA</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-[#aaaaaa] hover:text-white transition">Sobre Nós</a></li>
+                        <li><a href="#" class="text-[#aaaaaa] hover:text-white transition">Datacenters</a></li>
+                        <li><a href="#" class="text-[#aaaaaa] hover:text-white transition">Carreiras</a></li>
+                        <li><a href="#" class="text-[#aaaaaa] hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-[#aaaaaa] hover:text-white transition">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 tracking-wider">CONTATO</h4>
+                    <ul class="space-y-4 text-[#aaaaaa]">
+                        <li class="flex items-start">
+                            <i class='bx bx-envelope text-white mt-1 mr-3'></i>
+                            <span>contato@rededgamer.com.br</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class='bx bx-phone text-white mt-1 mr-3'></i>
+                            <span>+55 (11) 99999-9999</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class='bx bx-support text-white mt-1 mr-3'></i>
+                            <span>Suporte 24/7: suporte@rededgamer.com.br</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class='bx bx-map text-white mt-1 mr-3'></i>
+                            <span>São Paulo, Brasil</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-[#1a1a1a] text-center text-[#666666] text-sm">
+                <p>&copy; 2025 REDE GAMER HOSPEDAGENS. TODOS OS DIREITOS RESERVADOS.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

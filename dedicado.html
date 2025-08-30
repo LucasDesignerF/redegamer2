@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Servidores Dedicados - Rede Gamer Hospedagens. Ryzen 7, Dual Xeon, E5-2683v4. Localizado nos EUA.">
+    <meta name="keywords" content="servidor dedicado, hospedagem, gamer, ryzen, xeon, eua, estados unidos">
+    <meta name="author" content="Rede Gamer Hospedagens">
+    <meta name="robots" content="index, follow">
+    
+    <title>Servidores Dedicados - Rede Gamer Hospedagens</title>
+    
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        black: {
+                            900: '#000000',
+                            800: '#0a0a0a',
+                            700: '#111111',
+                            600: '#1a1a1a',
+                            500: '#222222',
+                            400: '#333333',
+                            300: '#444444',
+                            200: '#555555',
+                            100: '#666666'
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 5px rgba(255,255,255,0.2)' },
+                            '100%': { boxShadow: '0 0 20px rgba(255,255,255,0.4)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+        }
+        
+        .hero-bg {
+            background: radial-gradient(circle at 20% 50%, rgba(34, 34, 34, 0.3) 0%, rgba(0, 0, 0, 0) 30%),
+                        radial-gradient(circle at 80% 20%, rgba(34, 34, 34, 0.3) 0%, rgba(0, 0, 0, 0) 30%),
+                        #000000;
+        }
+        
+        .card {
+            background: linear-gradient(145deg, #0a0a0a, #000000);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+        }
+        
+        .btn {
+            background: linear-gradient(90deg, #111111, #0a0a0a);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: 0.5s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn:hover {
+            background: linear-gradient(90deg, #1a1a1a, #111111);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, #000000, #111111);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(90deg, #111111, #000000);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .neon-border {
+            position: relative;
+            background: #000000;
+        }
+        
+        .neon-border::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+            z-index: -1;
+        }
+        
+        .highlight {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        
+        .glow-text {
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            margin: 3rem 0;
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .glow {
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        
+        .hologram {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hologram::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transform: rotate(45deg);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        /* Dedicated server table styling */
+        .server-table {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .server-card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .server-card.popular::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #000000, #111111, #000000);
+        }
+        
+        .server-card.popular .popular-badge {
+            display: block;
+        }
+        
+        .popular-badge {
+            display: none;
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            background: linear-gradient(90deg, #000000, #111111);
+            color: white;
+            padding: 3px 30px;
+            transform: rotate(45deg);
+            font-size: 0.7rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        /* Configuration options */
+        .config-option {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .config-option:last-child {
+            border-bottom: none;
+        }
+        
+        .config-option:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+        
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(#222222, #333333);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(#333333, #444444);
+        }
+        
+        /* Custom animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+            }
+            
+            .hero-text, .hero-visual {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .hero-visual {
+                margin-top: 2rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-[#1a1a1a]">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-xl bg-black border border-[#222222] flex items-center justify-center neon-border">
+                    <i class='bx bx-server text-white text-2xl glow'></i>
+                </div>
+                <span class="text-2xl font-bold tracking-wider">REDE <span class="glow-text">GAMER</span></span>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-white transition-all duration-300 font-medium tracking-wider relative group">
+                    INÍCIO
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="vps.html" class="hover:text-white transition-all duration-300 font-medium tracking-wider relative group">
+                    VPS
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#" class="hover:text-white transition-all duration-300 font-medium tracking-wider relative group">
+                    DEDICADOS
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white"></span>
+                </a>
+                <a href="#" class="hover:text-white transition-all duration-300 font-medium tracking-wider relative group">
+                    SUPORTE
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#" class="hover:text-white transition-all duration-300 font-medium tracking-wider relative group">
+                    CONTATO
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <button class="hidden md:block btn text-white px-6 py-2.5 rounded-xl font-semibold text-sm tracking-wider">ÁREA DO CLIENTE</button>
+                <button id="menu-toggle" class="md:hidden text-2xl text-white">
+                    <i class='bx bx-menu'></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black py-4 px-4 border-t border-[#1a1a1a]">
+            <div class="flex flex-col space-y-4">
+                <a href="index.html" class="hover:text-white transition py-2 font-medium tracking-wider">INÍCIO</a>
+                <a href="vps.html" class="hover:text-white transition py-2 font-medium tracking-wider">VPS</a>
+                <a href="#" class="hover:text-white transition py-2 font-medium tracking-wider">DEDICADOS</a>
+                <a href="#" class="hover:text-white transition py-2 font-medium tracking-wider">SUPORTE</a>
+                <a href="#" class="hover:text-white transition py-2 font-medium tracking-wider">CONTATO</a>
+                <button class="btn text-white px-6 py-2.5 rounded-xl font-semibold mt-2 tracking-wider">ÁREA DO CLIENTE</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-20 md:py-28 relative overflow-hidden grid-pattern">
+        <div class="absolute top-20 left-10 w-64 h-64 bg-[#0a0a0a] rounded-full filter blur-3xl opacity-50"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-[#0a0a0a] rounded-full filter blur-3xl opacity-50"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row items-center hero-content">
+                <div class="md:w-1/2 mb-12 md:mb-0 hero-text">
+                    <div class="inline-block mb-4 px-4 py-1 bg-[#111111] border border-[#222222] rounded-full text-sm font-medium tracking-wider">
+                        <span class="text-[#aaaaaa]">SERVIDORES DEDICADOS</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 tracking-wide">
+                        POTÊNCIA <span class="highlight">MÁXIMA</span> PARA SUAS APLICAÇÕES
+                    </h1>
+                    <p class="text-xl text-[#cccccc] max-w-lg mb-8">
+                        Servidores dedicados com processadores de última geração, hospedados nos Estados Unidos com conectividade global.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center tracking-wider">
+                            ESCOLHA SEU SERVIDOR
+                            <i class='bx bx-right-arrow-alt ml-2 text-xl'></i>
+                        </button>
+                        <button class="btn text-white px-8 py-4 rounded-xl font-bold text-lg tracking-wider">
+                            INFRAESTRUTURA
+                        </button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center hero-visual">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-black border border-[#222222] p-1 floating hologram">
+                            <div class="w-full h-full rounded-2xl bg-[#0a0a0a] flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class='bx bx-chip text-7xl text-white mb-4 glow'></i>
+                                    <h3 class="text-2xl font-bold mb-2 tracking-wider">PROCESSADORES DE ALTO DESEMPENHO</h3>
+                                    <p class="text-[#aaaaaa]">RYZEN E XEON PARA MÁXIMA PERFORMANCE</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -top-4 -right-4 w-24 h-24 rounded-xl bg-black border border-[#333333] p-0.5 rotate-12 neon-border">
+                            <div class="w-full h-full rounded-xl bg-[#0a0a0a] flex items-center justify-center">
+                                <span class="text-xl font-bold highlight">EUA</span>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 w-32 h-32 rounded-xl bg-black border border-[#333333] p-0.5 -rotate-12 neon-border">
+                            <div class="w-full h-full rounded-xl bg-[#0a0a0a] flex items-center justify-center">
+                                <span class="text-xl font-bold">100% <br><span class="text-sm text-[#aaaaaa]">UPTIME</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-[#0a0a0a] border-y border-[#1a1a1a]">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6 group animate-fadeInUp">
+                    <div class="text-5xl font-bold highlight mb-3 group-hover:scale-110 transition-transform duration-300">RYZEN 7</div>
+                    <div class="text-[#aaaaaa] font-medium tracking-wider">3800X 3.9GHz</div>
+                </div>
+                <div class="p-6 group animate-fadeInUp">
+                    <div class="text-5xl font-bold highlight mb-3 group-hover:scale-110 transition-transform duration-300">DUAL XEON</div>
+                    <div class="text-[#aaaaaa] font-medium tracking-wider">5520 2.26GHz</div>
+                </div>
+                <div class="p-6 group animate-fadeInUp">
+                    <div class="text-5xl font-bold highlight mb-3 group-hover:scale-110 transition-transform duration-300">E5-2683v4</div>
+                    <div class="text-[#aaaaaa] font-medium tracking-wider">16 CORES</div>
+                </div>
+                <div class="p-6 group animate-fadeInUp">
+                    <div class="text-5xl font-bold highlight mb-3 group-hover:scale-110 transition-transform duration-300">EUA</div>
+                    <div class="text-[#aaaaaa] font-medium tracking-wider">DATACENTER</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infrastructure Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-wide">NOSSA <span class="highlight">INFRAESTRUTURA</span></h2>
+                <p class="text-[#cccccc] text-lg">Servidores dedicados hospedados em datacenter premium nos Estados Unidos</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="animate-fadeInUp">
+                    <h3 class="text-2xl font-bold mb-6 tracking-wider">CONFIGURAÇÃO DOS SERVIDORES</h3>
+                    <p class="text-[#cccccc] mb-6">Nossos servidores dedicados são equipados com hardware de alta performance para atender às mais exigentes aplicações:</p>
+                    
+                    <div class="grid grid-cols-1 gap-4 mb-8">
+                        <div class="flex items-center p-4 bg-[#0a0a0a] border border-[#222222] rounded-lg">
+                            <i class='bx bx-chip text-2xl text-white mr-4'></i>
+                            <div>
+                                <h4 class="font-bold">Processadores AMD e Intel</h4>
+                                <p class="text-[#aaaaaa] text-sm">Ryzen 7, Xeon E5 e Dual Xeon para máxima performance</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center p-4 bg-[#0a0a0a] border border-[#222222] rounded-lg">
+                            <i class='bx bx-memory-card text-2xl text-white mr-4'></i>
+                            <div>
+                                <h4 class="font-bold">Memória RAM DDR4</h4>
+                                <p class="text-[#aaaaaa] text-sm">Até 256GB de RAM para aplicações exigentes</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center p-4 bg-[#0a0a0a] border border-[#222222] rounded-lg">
+                            <i class='bx bx-hdd text-2xl text-white mr-4'></i>
+                            <div>
+                                <h4 class="font-bold">Armazenamento SSD/HDD</h4>
+                                <p class="text-[#aaaaaa] text-sm">Opções de SSD NVMe e HDD SATA de alta capacidade</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="animate-fadeInUp">
+                    <div class="card p-8 rounded-2xl">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-xl bg-black border border-[#222222] flex items-center justify-center mr-4 neon-border">
+                                <i class='bx bx-data text-2xl text-white glow'></i>
+                            </div>
+                            <h3 class="text-2xl font-bold tracking-wider">DATACENTER NOS EUA</h3>
+                        </div>
+                        <p class="text-[#cccccc] mb-6">Nossos servidores estão hospedados em datacenter premium nos Estados Unidos:</p>
+                        
+                        <ul class="space-y-4 mb-6">
+                            <li class="flex items-start">
+                                <i class='bx bx-check-circle text-white mt-1 mr-3'></i>
+                                <span>Conectividade com rede backbone global</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class='bx bx-check-circle text-white mt-1 mr-3'></i>
+                                <span>Redundância de rede e energia</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class='bx bx-check-circle text-white mt-1 mr-3'></i>
+                                <span>Proteção DDoS de última geração</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class='bx bx-check-circle text-white mt-1 mr-3'></i>
+                                <span>Ambiente com controle de temperatura e umidade</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="flex items-center mt-8">
+                            <div class="w-12 h-12 rounded-lg bg-black border border-[#222222] flex items-center justify-center mr-4">
+                                <i class='bx bx-globe text-white text-2xl'></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Datacenter Premium</h4>
+                                <p class="text-[#aaaaaa] text-sm">Ashburn, Virginia - EUA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dedicated Servers Section -->
+    <section class="py-20 bg-[#0a0a0a]">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-wide">SERVIDORES <span class="highlight">DEDICADOS</span></h2>
+                <p class="text-[#cccccc] text-lg">Escolha o servidor perfeito para suas necessidades de alta performance</p>
+                <div class="mt-6 p-4 bg-[#111111] border border-[#222222] rounded-lg inline-block">
+                    <p class="text-[#aaaaaa]">
+                        <i class='bx bx-info-circle text-white mr-2'></i>
+                        Todos os servidores incluem 1 IP dedicado e largura de banda ilimitada!
+                    </p>
+                </div>
+            </div>
+            
+            <div class="server-table">
+                <!-- Ryzen 7 3800X Server -->
+                <div class="server-card card p-6 rounded-2xl animate-fadeInUp">
+                    <h3 class="text-xl font-bold mb-2 tracking-wider">RYZEN 7 3800X</h3>
+                    <div class="mb-4">
+                        <span class="text-2xl font-bold">A partir de R$ 474,00</span>
+                        <span class="text-[#aaaaaa]">/mês</span>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <i class='bx bx-chip text-white mr-2 text-sm'></i>
+                            <span class="text-sm">3.9GHz / 4.5GHz Turbo</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-cpu text-white mr-2 text-sm'></i>
+                            <span class="text-sm">8 Cores / 16 Threads</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-hdd text-white mr-2 text-sm'></i>
+                            <span class="text-sm">480GB SSD ou 4TB HDD</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="border border-[#222222] rounded-lg mb-6">
+                        <div class="config-option">
+                            <span>32GB RAM</span>
+                            <span class="font-bold">R$ 474,00</span>
+                        </div>
+                        <div class="config-option">
+                            <span>64GB RAM</span>
+                            <span class="font-bold">R$ 584,00</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn text-white py-2 rounded-lg font-semibold w-full text-sm tracking-wider">CONTRATAR</button>
+                </div>
+                
+                <!-- Dual Xeon 5520 Server -->
+                <div class="server-card card p-6 rounded-2xl animate-fadeInUp">
+                    <h3 class="text-xl font-bold mb-2 tracking-wider">DUAL XEON 5520</h3>
+                    <div class="mb-4">
+                        <span class="text-2xl font-bold">A partir de R$ 199,00</span>
+                        <span class="text-[#aaaaaa]">/mês</span>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <i class='bx bx-chip text-white mr-2 text-sm'></i>
+                            <span class="text-sm">2.26GHz - 2 Processadores</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-cpu text-white mr-2 text-sm'></i>
+                            <span class="text-sm">8 Cores / 16 Threads</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-hdd text-white mr-2 text-sm'></i>
+                            <span class="text-sm">2x 2TB SATA</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="border border-[#222222] rounded-lg mb-6">
+                        <div class="config-option">
+                            <span>16GB RAM</span>
+                            <span class="font-bold">R$ 199,00</span>
+                        </div>
+                        <div class="config-option">
+                            <span>32GB RAM</span>
+                            <span class="font-bold">R$ 239,00</span>
+                        </div>
+                        <div class="config-option">
+                            <span>64GB RAM</span>
+                            <span class="font-bold">R$ 290,00</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn text-white py-2 rounded-lg font-semibold w-full text-sm tracking-wider">CONTRATAR</button>
+                </div>
+                
+                <!-- Dual Xeon E5-2660 Server -->
+                <div class="server-card card p-6 rounded-2xl animate-fadeInUp">
+                    <h3 class="text-xl font-bold mb-2 tracking-wider">DUAL XEON E5-2660</h3>
+                    <div class="mb-4">
+                        <span class="text-2xl font-bold">A partir de R$ 399,00</span>
+                        <span class="text-[#aaaaaa]">/mês</span>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <i class='bx bx-chip text-white mr-2 text-sm'></i>
+                            <span class="text-sm">16 Cores / 32 Threads</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-cpu text-white mr-2 text-sm'></i>
+                            <span class="text-sm">Dual Processador</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-hdd text-white mr-2 text-sm'></i>
+                            <span class="text-sm">480GB SSD</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="border border-[#222222] rounded-lg mb-6">
+                        <div class="config-option">
+                            <span>32GB RAM</span>
+                            <span class="font-bold">R$ 399,00</span>
+                        </div>
+                        <div class="config-option">
+                            <span>64GB RAM</span>
+                            <span class="font-bold">R$ 479,00</span>
+                        </div>
+                        <div class="config-option">
+                            <span>128GB RAM</span>
+                            <span class="font-bold">R$ 689,00</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn text-white py-2 rounded-lg font-semibold w-full text-sm tracking-wider">CONTRATAR</button>
+                </div>
+                
+                <!-- Xeon E5-2683v4 Server -->
+                <div class="server-card card p-6 rounded-2xl animate-fadeInUp popular">
+                    <div class="popular-badge">MAIS POPULAR</div>
+                    <h3 class="text-xl font-bold mb-2 tracking-wider">XEON E5-2683V4</h3>
+                    <div class="mb-4">
+                        <span class="text-2xl font-bold">A partir de R$ 499,00</span>
+                        <span class="text-[#aaaaaa]">/mês</span>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <i class='bx bx-chip text-white mr-2 text-sm'></i>
+                            <span class="text-sm">16 Cores / 32 Threads</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-cpu text-white mr-2 text-sm'></i>
+                            <span class="text-sm">Processador Único</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-hdd text-white mr-2 text-sm'></i>
+                            <span class="text-sm">8TB SATA HDD</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="border border-[#222222] rounded-lg mb-6">
+                        <div class="config-option">
+                            <span>32GB RAM</span>
+                            <span class="font-bold">R$ 499,00</span>
+                        </div>
+                        <div class="config-option">
+                            <span>64GB RAM</span>
+                            <span class="font-bold">R$ 569,00</span>
+                        </div>
+                        <div class="config-option">
+                            <span>128GB RAM</span>
+                            <span class="font-bold">R$ 679,00</span>
+                        </div>
+                        <div class="config-option">
+                            <span>256GB RAM (Dual)</span>
+                            <span class="font-bold">R$ 897,00</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-primary text-white py-2 rounded-lg font-semibold w-full text-sm tracking-wider">CONTRATAR</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-wide">BENEFÍCIOS <span class="highlight">EXCLUSIVOS</span></h2>
+                <p class="text-[#cccccc] text-lg">Tudo que você precisa para servidores dedicados de alta performance</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card p-8 rounded-2xl animate-fadeInUp">
+                    <div class="w-16 h-16 rounded-xl bg-black border border-[#222222] flex items-center justify-center mb-6 neon-border">
+                        <i class='bx bx-rocket text-2xl text-white glow'></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 tracking-wider">ALTA PERFORMANCE</h3>
+                    <p class="text-[#cccccc] mb-6">Processadores de última geração e memória DDR4 garantem desempenho máximo para suas aplicações.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>Processadores AMD Ryzen e Intel Xeon</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>Até 256GB de RAM DDR4</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>SSD NVMe e HDD SATA de alta capacidade</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="card p-8 rounded-2xl animate-fadeInUp">
+                    <div class="w-16 h-16 rounded-xl bg-black border border-[#222222] flex items-center justify-center mb-6 neon-border">
+                        <i class='bx bx-shield-quarter text-2xl text-white glow'></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 tracking-wider">SEGURANÇA AVANÇADA</h3>
+                    <p class="text-[#cccccc] mb-6">Proteção DDoS e firewall empresarial para garantir a segurança dos seus dados.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>Proteção DDoS de última geração</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>Firewall empresarial</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>Backups diários automáticos</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="card p-8 rounded-2xl animate-fadeInUp">
+                    <div class="w-16 h-16 rounded-xl bg-black border border-[#222222] flex items-center justify-center mb-6 neon-border">
+                        <i class='bx bx-world text-2xl text-white glow'></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 tracking-wider">LOCALIZAÇÃO ESTRATÉGICA</h3>
+                    <p class="text-[#cccccc] mb-6">Datacenter nos EUA com conectividade direta à rede backbone global.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>Datacenter premium - EUA</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>Conectividade com rede backbone</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>Redundância de rede e energia</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full bg-[#0a0a0a]"></div>
+        <div class="absolute top-20 left-10 w-64 h-64 bg-[#0a0a0a] rounded-full filter blur-3xl opacity-30"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-[#0a0a0a] rounded-full filter blur-3xl opacity-30"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 tracking-wide">PRONTO PARA EXPERIMENTAR A <span class="highlight">MELHOR PERFORMANCE</span>?</h2>
+                <p class="text-xl text-[#cccccc] mb-10">Junte-se a empresas que já confiam na Rede Gamer para suas soluções de servidores dedicados.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button class="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center tracking-wider">
+                        ESCOLHA SEU SERVIDOR
+                        <i class='bx bx-right-arrow-alt ml-2 text-xl'></i>
+                    </button>
+                    <button class="btn text-white px-8 py-4 rounded-xl font-bold text-lg tracking-wider">
+                        FALE COM UM ESPECIALISTA
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-[#1a1a1a] pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-black border border-[#222222] flex items-center justify-center neon-border">
+                            <i class='bx bx-server text-white text-2xl'></i>
+                        </div>
+                        <span class="text-2xl font-bold tracking-wider">REDE <span class="glow-text">GAMER</span></span>
+                    </div>
+                    <p class="text-[#aaaaaa] mb-6">Hospedagem de alta performance para gamers desde 2016.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-12 h-12 rounded-full bg-[#0a0a0a] border border-[#222222] flex items-center justify-center hover:bg-[#111111] transition neon-border">
+                            <i class='bx bxl-facebook text-xl'></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 rounded-full bg-[#0a0a0a] border border-[#222222] flex items-center justify-center hover:bg-[#111111] transition neon-border">
+                            <i class='bx bxl-twitter text-xl'></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 rounded-full bg-[#0a0a0a] border border-[#222222] flex items-center justify-center hover:bg-[#111111] transition neon-border">
+                            <i class='bx bxl-instagram text-xl'></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 rounded-full bg-[#0a0a0a] border border-[#222222] flex items-center justify-center hover:bg-[#111111] transition neon-border">
+                            <i class='bx bxl-linkedin text-xl'></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 tracking-wider">SERVIÇOS</h4>
+                    <ul class="space-y-3">
+                        <li><a href="vps.html" class="text-[#aaaaaa] hover:text-white transition">VPS Brasil</a></li>
+                        <li><a href="gaming.html" class="text-[#aaaaaa] hover:text-white transition">VPS EUA</a></li>
+                        <li><a href="dedicado.html" class="text-[#aaaaaa] hover:text-white transition">Servidores Dedicados</a></li>
+                        <li><a href="gaming.html" class="text-[#aaaaaa] hover:text-white transition">Cloud Gaming</a></li>
+                        <li><a href="#" class="text-[#aaaaaa] hover:text-white transition">Backup Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 tracking-wider">EMPRESA</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-[#aaaaaa] hover:text-white transition">Sobre Nós</a></li>
+                        <li><a href="#" class="text-[#aaaaaa] hover:text-white transition">Datacenters</a></li>
+                        <li><a href="#" class="text-[#aaaaaa] hover:text-white transition">Carreiras</a></li>
+                        <li><a href="#" class="text-[#aaaaaa] hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-[#aaaaaa] hover:text-white transition">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 tracking-wider">CONTATO</h4>
+                    <ul class="space-y-4 text-[#aaaaaa]">
+                        <li class="flex items-start">
+                            <i class='bx bx-envelope text-white mt-1 mr-3'></i>
+                            <span>contato@rededgamer.com.br</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class='bx bx-phone text-white mt-1 mr-3'></i>
+                            <span>+55 (11) 99999-9999</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class='bx bx-support text-white mt-1 mr-3'></i>
+                            <span>Suporte 24/7: suporte@rededgamer.com.br</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class='bx bx-map text-white mt-1 mr-3'></i>
+                            <span>São Paulo, Brasil</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-[#1a1a1a] text-center text-[#666666] text-sm">
+                <p>&copy; 2025 REDE GAMER HOSPEDAGENS. TODOS OS DIREITOS RESERVADOS.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Animation on scroll with Intersection Observer
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Apply to all cards and sections
+            document.querySelectorAll('.card, .animate-fadeInUp').forEach(card => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+            
+            // Add hover effect to buttons
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-3px)';
+                });
+                
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

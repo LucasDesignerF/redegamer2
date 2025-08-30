@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Planos VPS Gamer - Rede Gamer Hospedagens. AMD Ryzen 9 9950X, até 32GB RAM, 10 vCPU, 250GB SSD NVMe. Localizado em São Paulo, SP.">
+    <meta name="keywords" content="vps, hospedagem, gamer, amd ryzen, ssd nvme, sampa, sao paulo, ascenty">
+    <meta name="author" content="Rede Gamer Hospedagens">
+    <meta name="robots" content="index, follow">
+    
+    <title>Planos VPS - Rede Gamer Hospedagens</title>
+    
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        black: {
+                            900: '#000000',
+                            800: '#0a0a0a',
+                            700: '#111111',
+                            600: '#1a1a1a',
+                            500: '#222222',
+                            400: '#333333',
+                            300: '#444444',
+                            200: '#555555',
+                            100: '#666666'
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 5px rgba(255,255,255,0.2)' },
+                            '100%': { boxShadow: '0 0 20px rgba(255,255,255,0.4)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+        }
+        
+        .hero-bg {
+            background: radial-gradient(circle at 20% 50%, rgba(34, 34, 34, 0.3) 0%, rgba(0, 0, 0, 0) 30%),
+                        radial-gradient(circle at 80% 20%, rgba(34, 34, 34, 0.3) 0%, rgba(0, 0, 0, 0) 30%),
+                        #000000;
+        }
+        
+        .card {
+            background: linear-gradient(145deg, #0a0a0a, #000000);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+        }
+        
+        .btn {
+            background: linear-gradient(90deg, #111111, #0a0a0a);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: 0.5s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn:hover {
+            background: linear-gradient(90deg, #1a1a1a, #111111);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, #000000, #111111);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(90deg, #111111, #000000);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .neon-border {
+            position: relative;
+            background: #000000;
+        }
+        
+        .neon-border::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+            z-index: -1;
+        }
+        
+        .highlight {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        
+        .glow-text {
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            margin: 3rem 0;
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .glow {
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        
+        .hologram {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hologram::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transform: rotate(45deg);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        /* Pricing table styling */
+        .pricing-table-desktop {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .pricing-table-mobile {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .pricing-card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-card.popular::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #000000, #111111, #000000);
+        }
+        
+        .pricing-card.popular .popular-badge {
+            display: block;
+        }
+        
+        .popular-badge {
+            display: none;
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            background: linear-gradient(90deg, #000000, #111111);
+            color: white;
+            padding: 3px 30px;
+            transform: rotate(45deg);
+            font-size: 0.7rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(#222222, #333333);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(#333333, #444444);
+        }
+        
+        /* Custom animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .pricing-table-desktop {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .additional-plans {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
+                margin-top: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+            }
+            
+            .hero-text, .hero-visual {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .hero-visual {
+                margin-top: 2rem;
+            }
+            
+            .pricing-table-desktop {
+                grid-template-columns: 1fr;
+            }
+            
+            .additional-plans {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-[#1a1a1a]">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-xl bg-black border border-[#222222] flex items-center justify-center neon-border">
+                    <i class='bx bx-server text-white text-2xl glow'></i>
+                </div>
+                <span class="text-2xl font-bold tracking-wider">REDE <span class="glow-text">GAMER</span></span>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-white transition-all duration-300 font-medium tracking-wider relative group">
+                    INÍCIO
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#" class="hover:text-white transition-all duration-300 font-medium tracking-wider relative group">
+                    VPS
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white"></span>
+                </a>
+                <a href="dedicado.html" class="hover:text-white transition-all duration-300 font-medium tracking-wider relative group">
+                    DEDICADOS
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#" class="hover:text-white transition-all duration-300 font-medium tracking-wider relative group">
+                    SUPORTE
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#" class="hover:text-white transition-all duration-300 font-medium tracking-wider relative group">
+                    CONTATO
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <button class="hidden md:block btn text-white px-6 py-2.5 rounded-xl font-semibold text-sm tracking-wider">ÁREA DO CLIENTE</button>
+                <button id="menu-toggle" class="md:hidden text-2xl text-white">
+                    <i class='bx bx-menu'></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black py-4 px-4 border-t border-[#1a1a1a]">
+            <div class="flex flex-col space-y-4">
+                <a href="index.html" class="hover:text-white transition py-2 font-medium tracking-wider">INÍCIO</a>
+                <a href="#" class="hover:text-white transition py-2 font-medium tracking-wider">VPS</a>
+                <a href="dedicado.html" class="hover:text-white transition py-2 font-medium tracking-wider">DEDICADOS</a>
+                <a href="#" class="hover:text-white transition py-2 font-medium tracking-wider">SUPORTE</a>
+                <a href="#" class="hover:text-white transition py-2 font-medium tracking-wider">CONTATO</a>
+                <button class="btn text-white px-6 py-2.5 rounded-xl font-semibold mt-2 tracking-wider">ÁREA DO CLIENTE</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-20 md:py-28 relative overflow-hidden grid-pattern">
+        <div class="absolute top-20 left-10 w-64 h-64 bg-[#0a0a0a] rounded-full filter blur-3xl opacity-50"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-[#0a0a0a] rounded-full filter blur-3xl opacity-50"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row items-center hero-content">
+                <div class="md:w-1/2 mb-12 md:mb-0 hero-text">
+                    <div class="inline-block mb-4 px-4 py-1 bg-[#111111] border border-[#222222] rounded-full text-sm font-medium tracking-wider">
+                        <span class="text-[#aaaaaa]">AMD RYZEN 9 9950X</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 tracking-wide">
+                        VPS DE <span class="highlight">ALTA PERFORMANCE</span> PARA GAMERS
+                    </h1>
+                    <p class="text-xl text-[#cccccc] max-w-lg mb-8">
+                        Infraestrutura otimizada com processadores AMD Ryzen de última geração, SSD NVMe e localização estratégica em São Paulo.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center tracking-wider">
+                            ESCOLHA SEU PLANO
+                            <i class='bx bx-right-arrow-alt ml-2 text-xl'></i>
+                        </button>
+                        <button class="btn text-white px-8 py-4 rounded-xl font-bold text-lg tracking-wider">
+                            INFRAESTRUTURA
+                        </button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center hero-visual">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-black border border-[#222222] p-1 floating hologram">
+                            <div class="w-full h-full rounded-2xl bg-[#0a0a0a] flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class='bx bx-chip text-7xl text-white mb-4 glow'></i>
+                                    <h3 class="text-2xl font-bold mb-2 tracking-wider">AMD RYZEN 9 9950X</h3>
+                                    <p class="text-[#aaaaaa]">ATÉ 5.7GHz DE PERFORMANCE</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -top-4 -right-4 w-24 h-24 rounded-xl bg-black border border-[#333333] p-0.5 rotate-12 neon-border">
+                            <div class="w-full h-full rounded-xl bg-[#0a0a0a] flex items-center justify-center">
+                                <span class="text-xl font-bold highlight">DDR5</span>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 w-32 h-32 rounded-xl bg-black border border-[#333333] p-0.5 -rotate-12 neon-border">
+                            <div class="w-full h-full rounded-xl bg-[#0a0a0a] flex items-center justify-center">
+                                <span class="text-xl font-bold">NVMe <br><span class="text-sm text-[#aaaaaa]">6.5GB/s</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-[#0a0a0a] border-y border-[#1a1a1a]">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6 group animate-fadeInUp">
+                    <div class="text-5xl font-bold highlight mb-3 group-hover:scale-110 transition-transform duration-300">AMD</div>
+                    <div class="text-[#aaaaaa] font-medium tracking-wider">RYZEN 9 9950X</div>
+                </div>
+                <div class="p-6 group animate-fadeInUp">
+                    <div class="text-5xl font-bold highlight mb-3 group-hover:scale-110 transition-transform duration-300">DDR5</div>
+                    <div class="text-[#aaaaaa] font-medium tracking-wider">6.000MHz</div>
+                </div>
+                <div class="p-6 group animate-fadeInUp">
+                    <div class="text-5xl font-bold highlight mb-3 group-hover:scale-110 transition-transform duration-300">NVMe</div>
+                    <div class="text-[#aaaaaa] font-medium tracking-wider">6.5GB/s</div>
+                </div>
+                <div class="p-6 group animate-fadeInUp">
+                    <div class="text-5xl font-bold highlight mb-3 group-hover:scale-110 transition-transform duration-300">SÃO PAULO</div>
+                    <div class="text-[#aaaaaa] font-medium tracking-wider">🇧🇷 ASCENTY</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infrastructure Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-wide">NOSSA <span class="highlight">INFRAESTRUTURA</span></h2>
+                <p class="text-[#cccccc] text-lg">Tecnologia de ponta para oferecer a melhor experiência de hospedagem gamer</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="animate-fadeInUp">
+                    <h3 class="text-2xl font-bold mb-6 tracking-wider">CONFIGURAÇÃO DE SERVIDORES</h3>
+                    <p class="text-[#cccccc] mb-6">Nossas VPS são equipadas com a mais recente tecnologia para proporcionar desempenho excepcional:</p>
+                    
+                    <div class="grid grid-cols-1 gap-4 mb-8">
+                        <div class="flex items-center p-4 bg-[#0a0a0a] border border-[#222222] rounded-lg">
+                            <i class='bx bx-chip text-2xl text-white mr-4'></i>
+                            <div>
+                                <h4 class="font-bold">Processador AMD Ryzen 9 9950X</h4>
+                                <p class="text-[#aaaaaa] text-sm">Até 5.7GHz de clock máximo</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center p-4 bg-[#0a0a0a] border border-[#222222] rounded-lg">
+                            <i class='bx bx-memory-card text-2xl text-white mr-4'></i>
+                            <div>
+                                <h4 class="font-bold">Memória RAM DDR5 6.000MHz</h4>
+                                <p class="text-[#aaaaaa] text-sm">Alta velocidade e baixa latência</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center p-4 bg-[#0a0a0a] border border-[#222222] rounded-lg">
+                            <i class='bx bx-hdd text-2xl text-white mr-4'></i>
+                            <div>
+                                <h4 class="font-bold">SSD NVMe WD Black</h4>
+                                <p class="text-[#aaaaaa] text-sm">Velocidade de leitura de até 6.5GB/s</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="animate-fadeInUp">
+                    <div class="card p-8 rounded-2xl">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-xl bg-black border border-[#222222] flex items-center justify-center mr-4 neon-border">
+                                <i class='bx bx-data text-2xl text-white glow'></i>
+                            </div>
+                            <h3 class="text-2xl font-bold tracking-wider">DATACENTER ASCENTY</h3>
+                        </div>
+                        <p class="text-[#cccccc] mb-6">Nossos servidores estão hospedados nos datacenters da Ascenty em São Paulo:</p>
+                        
+                        <ul class="space-y-4 mb-6">
+                            <li class="flex items-start">
+                                <i class='bx bx-check-circle text-white mt-1 mr-3'></i>
+                                <span>Conectividade direta com os principais ISPs brasileiros</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class='bx bx-check-circle text-white mt-1 mr-3'></i>
+                                <span>Redundância de rede e energia</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class='bx bx-check-circle text-white mt-1 mr-3'></i>
+                                <span>Proteção DDoS Computize de última geração</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class='bx bx-check-circle text-white mt-1 mr-3'></i>
+                                <span>Ambiente com controle de temperatura e umidade</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="flex items-center mt-8">
+                            <div class="w-12 h-12 rounded-lg bg-black border border-[#222222] flex items-center justify-center mr-4">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0wIDE4Yy00LjQxIDAtOC0zLjU5LTgtOHMzLjU5LTggOC04IDggMy41OSA4IDgtMy41OSA4LTggOHptLTMtOWgydjdoLTJ2LTd6bTMtN2gydjE0aC0ydjE0eiIvPjwvc3ZnPg==" alt="Ascenty" class="w-8 h-8">
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Ascenty Data Centers</h4>
+                                <p class="text-[#aaaaaa] text-sm">São Paulo, Brasil</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Pricing Section -->
+<section class="py-20 bg-[#0a0a0a]">
+    <div class="container mx-auto px-4">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-wide">PLANOS <span class="highlight">VPS GAMER</span></h2>
+            <p class="text-[#cccccc] text-lg">Escolha o plano perfeito para suas necessidades de hospedagem</p>
+            <div class="mt-6 p-4 bg-[#111111] border border-[#222222] rounded-lg inline-block">
+                <p class="text-[#aaaaaa]">
+                    <i class='bx bx-info-circle text-white mr-2'></i>
+                    Cada VPS inclui 1 IP dedicado e todas as portas liberadas!
+                </p>
+            </div>
+        </div>
+
+        <!-- Primeira linha: 4 planos (desktop) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+            <!-- VPS #01 -->
+            <div class="pricing-card card p-6 rounded-2xl animate-fadeInUp">
+                <h3 class="text-xl font-bold mb-2 tracking-wider">VPS #01</h3>
+                <div class="mb-4">
+                    <span class="text-2xl font-bold">R$ 59,90</span>
+                    <span class="text-[#aaaaaa]">/mês</span>
+                </div>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-center">
+                        <i class='bx bx-memory-card text-white mr-2 text-sm'></i>
+                        <span class="text-sm">2GB RAM DDR5</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-chip text-white mr-2 text-sm'></i>
+                        <span class="text-sm">1 vCPU AMD Ryzen</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-hdd text-white mr-2 text-sm'></i>
+                        <span class="text-sm">35GB SSD NVMe</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-world text-white mr-2 text-sm'></i>
+                        <span class="text-sm">1 IP Dedicado</span>
+                    </li>
+                </ul>
+                <button class="btn text-white py-2 rounded-lg font-semibold w-full text-sm tracking-wider">CONTRATAR</button>
+            </div>
+            
+            <!-- VPS #02 -->
+            <div class="pricing-card card p-6 rounded-2xl animate-fadeInUp">
+                <h3 class="text-xl font-bold mb-2 tracking-wider">VPS #02</h3>
+                <div class="mb-4">
+                    <span class="text-2xl font-bold">R$ 79,90</span>
+                    <span class="text-[#aaaaaa]">/mês</span>
+                </div>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-center">
+                        <i class='bx bx-memory-card text-white mr-2 text-sm'></i>
+                        <span class="text-sm">4GB RAM DDR5</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-chip text-white mr-2 text-sm'></i>
+                        <span class="text-sm">2 vCPU AMD Ryzen</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-hdd text-white mr-2 text-sm'></i>
+                        <span class="text-sm">50GB SSD NVMe</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-world text-white mr-2 text-sm'></i>
+                        <span class="text-sm">1 IP Dedicado</span>
+                    </li>
+                </ul>
+                <button class="btn text-white py-2 rounded-lg font-semibold w-full text-sm tracking-wider">CONTRATAR</button>
+            </div>
+            
+            <!-- VPS #03 -->
+            <div class="pricing-card card p-6 rounded-2xl animate-fadeInUp">
+                <h3 class="text-xl font-bold mb-2 tracking-wider">VPS #03</h3>
+                <div class="mb-4">
+                    <span class="text-2xl font-bold">R$ 109,90</span>
+                    <span class="text-[#aaaaaa]">/mês</span>
+                </div>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-center">
+                        <i class='bx bx-memory-card text-white mr-2 text-sm'></i>
+                        <span class="text-sm">8GB RAM DDR5</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-chip text-white mr-2 text-sm'></i>
+                        <span class="text-sm">3 vCPU AMD Ryzen</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-hdd text-white mr-2 text-sm'></i>
+                        <span class="text-sm">100GB SSD NVMe</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-world text-white mr-2 text-sm'></i>
+                        <span class="text-sm">1 IP Dedicado</span>
+                    </li>
+                </ul>
+                <button class="btn text-white py-2 rounded-lg font-semibold w-full text-sm tracking-wider">CONTRATAR</button>
+            </div>
+            
+            <!-- VPS #04 -->
+            <div class="pricing-card card p-6 rounded-2xl animate-fadeInUp">
+                <h3 class="text-xl font-bold mb-2 tracking-wider">VPS #04</h3>
+                <div class="mb-4">
+                    <span class="text-2xl font-bold">R$ 159,90</span>
+                    <span class="text-[#aaaaaa]">/mês</span>
+                </div>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-center">
+                        <i class='bx bx-memory-card text-white mr-2 text-sm'></i>
+                        <span class="text-sm">12GB RAM DDR5</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-chip text-white mr-2 text-sm'></i>
+                        <span class="text-sm">4 vCPU AMD Ryzen</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-hdd text-white mr-2 text-sm'></i>
+                        <span class="text-sm">140GB SSD NVMe</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-world text-white mr-2 text-sm'></i>
+                        <span class="text-sm">1 IP Dedicado</span>
+                    </li>
+                </ul>
+                <button class="btn text-white py-2 rounded-lg font-semibold w-full text-sm tracking-wider">CONTRATAR</button>
+            </div>
+        </div>
+
+        <!-- Segunda linha: 3 planos centralizados (desktop) -->
+        <div class="hidden lg:grid grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <!-- VPS #05 -->
+            <div class="pricing-card card p-6 rounded-2xl animate-fadeInUp">
+                <h3 class="text-xl font-bold mb-2 tracking-wider">VPS #05</h3>
+                <div class="mb-4">
+                    <span class="text-2xl font-bold">R$ 199,90</span>
+                    <span class="text-[#aaaaaa]">/mês</span>
+                </div>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-center">
+                        <i class='bx bx-memory-card text-white mr-2 text-sm'></i>
+                        <span class="text-sm">16GB RAM DDR5</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-chip text-white mr-2 text-sm'></i>
+                        <span class="text-sm">6 vCPU AMD Ryzen</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-hdd text-white mr-2 text-sm'></i>
+                        <span class="text-sm">170GB SSD NVMe</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-world text-white mr-2 text-sm'></i>
+                        <span class="text-sm">1 IP Dedicado</span>
+                    </li>
+                </ul>
+                <button class="btn text-white py-2 rounded-lg font-semibold w-full text-sm tracking-wider">CONTRATAR</button>
+            </div>
+            
+            <!-- VPS #06 -->
+            <div class="pricing-card card p-6 rounded-2xl animate-fadeInUp">
+                <h3 class="text-xl font-bold mb-2 tracking-wider">VPS #06</h3>
+                <div class="mb-4">
+                    <span class="text-2xl font-bold">R$ 269,90</span>
+                    <span class="text-[#aaaaaa]">/mês</span>
+                </div>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-center">
+                        <i class='bx bx-memory-card text-white mr-2 text-sm'></i>
+                        <span class="text-sm">24GB RAM DDR5</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-chip text-white mr-2 text-sm'></i>
+                        <span class="text-sm">8 vCPU AMD Ryzen</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-hdd text-white mr-2 text-sm'></i>
+                        <span class="text-sm">200GB SSD NVMe</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-world text-white mr-2 text-sm'></i>
+                        <span class="text-sm">1 IP Dedicado</span>
+                    </li>
+                </ul>
+                <button class="btn text-white py-2 rounded-lg font-semibold w-full text-sm tracking-wider">CONTRATAR</button>
+            </div>
+            
+            <!-- VPS #07 (Popular) -->
+            <div class="pricing-card card p-6 rounded-2xl animate-fadeInUp popular">
+                <div class="popular-badge">MAIS POPULAR</div>
+                <h3 class="text-xl font-bold mb-2 tracking-wider">VPS #07</h3>
+                <div class="mb-4">
+                    <span class="text-2xl font-bold">R$ 319,90</span>
+                    <span class="text-[#aaaaaa]">/mês</span>
+                </div>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-center">
+                        <i class='bx bx-memory-card text-white mr-2 text-sm'></i>
+                        <span class="text-sm">32GB RAM DDR5</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-chip text-white mr-2 text-sm'></i>
+                        <span class="text-sm">10 vCPU AMD Ryzen</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-hdd text-white mr-2 text-sm'></i>
+                        <span class="text-sm">250GB SSD NVMe</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-world text-white mr-2 text-sm'></i>
+                        <span class="text-sm">1 IP Dedicado</span>
+                    </li>
+                </ul>
+                <button class="btn-primary text-white py-2 rounded-lg font-semibold w-full text-sm tracking-wider">CONTRATAR</button>
+            </div>
+        </div>
+
+        <!-- Layout para tablets e mobile: todos os planos em uma única coluna -->
+        <div class="lg:hidden pricing-table">
+            <!-- VPS #01 -->
+            <div class="pricing-card card p-6 rounded-2xl animate-fadeInUp">
+                <h3 class="text-xl font-bold mb-2 tracking-wider">VPS #01</h3>
+                <div class="mb-4">
+                    <span class="text-2xl font-bold">R$ 59,90</span>
+                    <span class="text-[#aaaaaa]">/mês</span>
+                </div>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-center">
+                        <i class='bx bx-memory-card text-white mr-2 text-sm'></i>
+                        <span class="text-sm">2GB RAM DDR5</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-chip text-white mr-2 text-sm'></i>
+                        <span class="text-sm">1 vCPU AMD Ryzen</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-hdd text-white mr-2 text-sm'></i>
+                        <span class="text-sm">35GB SSD NVMe</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-world text-white mr-2 text-sm'></i>
+                        <span class="text-sm">1 IP Dedicado</span>
+                    </li>
+                </ul>
+                <button class="btn text-white py-2 rounded-lg font-semibold w-full text-sm tracking-wider">CONTRATAR</button>
+            </div>
+            
+            <!-- VPS #02 -->
+            <div class="pricing-card card p-6 rounded-2xl animate-fadeInUp">
+                <h3 class="text-xl font-bold mb-2 tracking-wider">VPS #02</h3>
+                <div class="mb-4">
+                    <span class="text-2xl font-bold">R$ 79,90</span>
+                    <span class="text-[#aaaaaa]">/mês</span>
+                </div>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-center">
+                        <i class='bx bx-memory-card text-white mr-2 text-sm'></i>
+                        <span class="text-sm">4GB RAM DDR5</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-chip text-white mr-2 text-sm'></i>
+                        <span class="text-sm">2 vCPU AMD Ryzen</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-hdd text-white mr-2 text-sm'></i>
+                        <span class="text-sm">50GB SSD NVMe</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-world text-white mr-2 text-sm'></i>
+                        <span class="text-sm">1 IP Dedicado</span>
+                    </li>
+                </ul>
+                <button class="btn text-white py-2 rounded-lg font-semibold w-full text-sm tracking-wider">CONTRATAR</button>
+            </div>
+            
+            <!-- VPS #03 -->
+            <div class="pricing-card card p-6 rounded-2xl animate-fadeInUp">
+                <h3 class="text-xl font-bold mb-2 tracking-wider">VPS #03</h3>
+                <div class="mb-4">
+                    <span class="text-2xl font-bold">R$ 109,90</span>
+                    <span class="text-[#aaaaaa]">/mês</span>
+                </div>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-center">
+                        <i class='bx bx-memory-card text-white mr-2 text-sm'></i>
+                        <span class="text-sm">8GB RAM DDR5</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-chip text-white mr-2 text-sm'></i>
+                        <span class="text-sm">3 vCPU AMD Ryzen</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-hdd text-white mr-2 text-sm'></i>
+                        <span class="text-sm">100GB SSD NVMe</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-world text-white mr-2 text-sm'></i>
+                        <span class="text-sm">1 IP Dedicado</span>
+                    </li>
+                </ul>
+                <button class="btn text-white py-2 rounded-lg font-semibold w-full text-sm tracking-wider">CONTRATAR</button>
+            </div>
+            
+            <!-- VPS #04 -->
+            <div class="pricing-card card p-6 rounded-2xl animate-fadeInUp">
+                <h3 class="text-xl font-bold mb-2 tracking-wider">VPS #04</h3>
+                <div class="mb-4">
+                    <span class="text-2xl font-bold">R$ 159,90</span>
+                    <span class="text-[#aaaaaa]">/mês</span>
+                </div>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-center">
+                        <i class='bx bx-memory-card text-white mr-2 text-sm'></i>
+                        <span class="text-sm">12GB RAM DDR5</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-chip text-white mr-2 text-sm'></i>
+                        <span class="text-sm">4 vCPU AMD Ryzen</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-hdd text-white mr-2 text-sm'></i>
+                        <span class="text-sm">140GB SSD NVMe</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-world text-white mr-2 text-sm'></i>
+                        <span class="text-sm">1 IP Dedicado</span>
+                    </li>
+                </ul>
+                <button class="btn text-white py-2 rounded-lg font-semibold w-full text-sm tracking-wider">CONTRATAR</button>
+            </div>
+            
+            <!-- VPS #05 -->
+            <div class="pricing-card card p-6 rounded-2xl animate-fadeInUp">
+                <h3 class="text-xl font-bold mb-2 tracking-wider">VPS #05</h3>
+                <div class="mb-4">
+                    <span class="text-2xl font-bold">R$ 199,90</span>
+                    <span class="text-[#aaaaaa]">/mês</span>
+                </div>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-center">
+                        <i class='bx bx-memory-card text-white mr-2 text-sm'></i>
+                        <span class="text-sm">16GB RAM DDR5</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-chip text-white mr-2 text-sm'></i>
+                        <span class="text-sm">6 vCPU AMD Ryzen</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-hdd text-white mr-2 text-sm'></i>
+                        <span class="text-sm">170GB SSD NVMe</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-world text-white mr-2 text-sm'></i>
+                        <span class="text-sm">1 IP Dedicado</span>
+                    </li>
+                </ul>
+                <button class="btn text-white py-2 rounded-lg font-semibold w-full text-sm tracking-wider">CONTRATAR</button>
+            </div>
+            
+            <!-- VPS #06 -->
+            <div class="pricing-card card p-6 rounded-2xl animate-fadeInUp">
+                <h3 class="text-xl font-bold mb-2 tracking-wider">VPS #06</h3>
+                <div class="mb-4">
+                    <span class="text-2xl font-bold">R$ 269,90</span>
+                    <span class="text-[#aaaaaa]">/mês</span>
+                </div>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-center">
+                        <i class='bx bx-memory-card text-white mr-2 text-sm'></i>
+                        <span class="text-sm">24GB RAM DDR5</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-chip text-white mr-2 text-sm'></i>
+                        <span class="text-sm">8 vCPU AMD Ryzen</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-hdd text-white mr-2 text-sm'></i>
+                        <span class="text-sm">200GB SSD NVMe</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-world text-white mr-2 text-sm'></i>
+                        <span class="text-sm">1 IP Dedicado</span>
+                    </li>
+                </ul>
+                <button class="btn text-white py-2 rounded-lg font-semibold w-full text-sm tracking-wider">CONTRATAR</button>
+            </div>
+            
+            <!-- VPS #07 (Popular) -->
+            <div class="pricing-card card p-6 rounded-2xl animate-fadeInUp popular">
+                <div class="popular-badge">MAIS POPULAR</div>
+                <h3 class="text-xl font-bold mb-2 tracking-wider">VPS #07</h3>
+                <div class="mb-4">
+                    <span class="text-2xl font-bold">R$ 319,90</span>
+                    <span class="text-[#aaaaaa]">/mês</span>
+                </div>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-center">
+                        <i class='bx bx-memory-card text-white mr-2 text-sm'></i>
+                        <span class="text-sm">32GB RAM DDR5</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-chip text-white mr-2 text-sm'></i>
+                        <span class="text-sm">10 vCPU AMD Ryzen</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-hdd text-white mr-2 text-sm'></i>
+                        <span class="text-sm">250GB SSD NVMe</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class='bx bx-world text-white mr-2 text-sm'></i>
+                        <span class="text-sm">1 IP Dedicado</span>
+                    </li>
+                </ul>
+                <button class="btn-primary text-white py-2 rounded-lg font-semibold w-full text-sm tracking-wider">CONTRATAR</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Features Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-wide">BENEFÍCIOS <span class="highlight">EXCLUSIVOS</span></h2>
+                <p class="text-[#cccccc] text-lg">Tudo que você precisa para uma hospedagem gamer de alta performance</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card p-8 rounded-2xl animate-fadeInUp">
+                    <div class="w-16 h-16 rounded-xl bg-black border border-[#222222] flex items-center justify-center mb-6 neon-border">
+                        <i class='bx bx-rocket text-2xl text-white glow'></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 tracking-wider">ALTA PERFORMANCE</h3>
+                    <p class="text-[#cccccc] mb-6">Processadores AMD Ryzen 9 9950X e memória DDR5 garantem desempenho máximo para seus servidores.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>Até 5.7GHz de clock</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>Velocidade DDR5 6.000MHz</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>SSD NVMe de 6.5GB/s</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="card p-8 rounded-2xl animate-fadeInUp">
+                    <div class="w-16 h-16 rounded-xl bg-black border border-[#222222] flex items-center justify-center mb-6 neon-border">
+                        <i class='bx bx-shield-quarter text-2xl text-white glow'></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 tracking-wider">SEGURANÇA AVANÇADA</h3>
+                    <p class="text-[#cccccc] mb-6">Proteção DDoS Computize e firewall empresarial para garantir a segurança dos seus dados.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>Proteção DDoS Computize</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>Firewall empresarial</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>Backups diários automáticos</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="card p-8 rounded-2xl animate-fadeInUp">
+                    <div class="w-16 h-16 rounded-xl bg-black border border-[#222222] flex items-center justify-center mb-6 neon-border">
+                        <i class='bx bx-world text-2xl text-white glow'></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 tracking-wider">LOCALIZAÇÃO ESTRATÉGICA</h3>
+                    <p class="text-[#cccccc] mb-6">Datacenter Ascenty em São Paulo com conectividade direta aos principais ISPs brasileiros.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>Datacenter Ascenty - Brasil</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>Conectividade com ISPs</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class='bx bx-check-circle text-white mr-3'></i>
+                            <span>Redundância de rede e energia</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full bg-[#0a0a0a]"></div>
+        <div class="absolute top-20 left-10 w-64 h-64 bg-[#0a0a0a] rounded-full filter blur-3xl opacity-30"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-[#0a0a0a] rounded-full filter blur-3xl opacity-30"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 tracking-wide">PRONTO PARA EXPERIMENTAR A <span class="highlight">MELHOR VPS GAMER</span>?</h2>
+                <p class="text-xl text-[#cccccc] mb-10">Junte-se a mais de 20 clientes que já confiam na Rede Gamer para suas soluções de hospedagem.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button class="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center tracking-wider">
+                        ESCOLHA SEU PLANO
+                        <i class='bx bx-right-arrow-alt ml-2 text-xl'></i>
+                    </button>
+                    <button class="btn text-white px-8 py-4 rounded-xl font-bold text-lg tracking-wider">
+                        FALE COM UM ESPECIALISTA
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-[#1a1a1a] pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-black border border-[#222222] flex items-center justify-center neon-border">
+                            <i class='bx bx-server text-white text-2xl'></i>
+                        </div>
+                        <span class="text-2xl font-bold tracking-wider">REDE <span class="glow-text">GAMER</span></span>
+                    </div>
+                    <p class="text-[#aaaaaa] mb-6">Hospedagem de alta performance para gamers desde 2016.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-12 h-12 rounded-full bg-[#0a0a0a] border border-[#222222] flex items-center justify-center hover:bg-[#111111] transition neon-border">
+                            <i class='bx bxl-facebook text-xl'></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 rounded-full bg-[#0a0a0a] border border-[#222222] flex items-center justify-center hover:bg-[#111111] transition neon-border">
+                            <i class='bx bxl-twitter text-xl'></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 rounded-full bg-[#0a0a0a] border border-[#222222] flex items-center justify-center hover:bg-[#111111] transition neon-border">
+                            <i class='bx bxl-instagram text-xl'></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 rounded-full bg-[#0a0a0a] border border-[#222222] flex items-center justify-center hover:bg-[#111111] transition neon-border">
+                            <i class='bx bxl-linkedin text-xl'></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 tracking-wider">SERVIÇOS</h4>
+                    <ul class="space-y-3">
+                        <li><a href="vps.html" class="text-[#aaaaaa] hover:text-white transition">VPS Brasil</a></li>
+                        <li><a href="gaming.html" class="text-[#aaaaaa] hover:text-white transition">VPS EUA</a></li>
+                        <li><a href="dedicado.html" class="text-[#aaaaaa] hover:text-white transition">Servidores Dedicados</a></li>
+                        <li><a href="gaming.html" class="text-[#aaaaaa] hover:text-white transition">Cloud Gaming</a></li>
+                        <li><a href="#" class="text-[#aaaaaa] hover:text-white transition">Backup Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 tracking-wider">EMPRESA</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-[#aaaaaa] hover:text-white transition">Sobre Nós</a></li>
+                        <li><a href="#" class="text-[#aaaaaa] hover:text-white transition">Datacenters</a></li>
+                        <li><a href="#" class="text-[#aaaaaa] hover:text-white transition">Carreiras</a></li>
+                        <li><a href="#" class="text-[#aaaaaa] hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-[#aaaaaa] hover:text-white transition">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 tracking-wider">CONTATO</h4>
+                    <ul class="space-y-4 text-[#aaaaaa]">
+                        <li class="flex items-start">
+                            <i class='bx bx-envelope text-white mt-1 mr-3'></i>
+                            <span>contato@rededgamer.com.br</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class='bx bx-phone text-white mt-1 mr-3'></i>
+                            <span>+55 (11) 99999-9999</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class='bx bx-support text-white mt-1 mr-3'></i>
+                            <span>Suporte 24/7: suporte@rededgamer.com.br</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class='bx bx-map text-white mt-1 mr-3'></i>
+                            <span>São Paulo, Brasil</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-[#1a1a1a] text-center text-[#666666] text-sm">
+                <p>&copy; 2025 REDE GAMER HOSPEDAGENS. TODOS OS DIREITOS RESERVADOS.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
