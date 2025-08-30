@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servidores Dedicados - Rede Gamer Hospedagens</title>
-    <meta name="description" content="Servidores dedicados de alta performance para gamers. Ryzen 7, Dual Xeon, com até 256GB RAM. Localizados nos EUA.">
-    <meta name="keywords" content="servidor dedicado, hospedagem, Ryzen, Xeon, gaming, performance, EUA">
+    <title>Blog - Rede Gamer Hospedagens</title>
+    <meta name="description" content="Blog da Rede Gamer Hospedagens. Notícias, tutoriais e dicas sobre hospedagem gamer, servidores VPS, dedicados e muito mais.">
+    <meta name="keywords" content="blog, hospedagem, vps, servidor dedicado, gaming, tutoriais, notícias, dicas, tecnologia">
     <meta name="author" content="Rede Gamer Hospedagens">
     <!-- TailwindCSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -120,29 +120,14 @@
         .glow-text {
             text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
         }
-        .pricing-table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0 1rem;
-        }
-        .pricing-row {
-            background: linear-gradient(145deg, #0a0a0a, #000000);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 0.75rem;
-            overflow: hidden;
+        .blog-card {
             transition: all 0.3s ease;
         }
-        .pricing-row:hover {
-            transform: translateY(-5px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+        .blog-card:hover {
+            transform: translateY(-10px);
         }
-        .pricing-header {
+        .category-tag {
             background: rgba(17, 17, 17, 0.8);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .popular-badge {
-            background: linear-gradient(90deg, #111111, #0a0a0a);
             color: #ffffff;
             padding: 0.25rem 0.75rem;
             border-radius: 9999px;
@@ -150,32 +135,38 @@
             font-weight: 600;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        .spec-value {
-            font-weight: 600;
-            color: #ffffff;
+        .author-badge {
+            display: flex;
+            align-items: center;
         }
-        .price-highlight {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #ffffff;
+        .author-badge img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 0.75rem;
+            border: 2px solid rgba(255, 255, 255, 0.1);
         }
-        @media (max-width: 768px) {
-            .pricing-table {
-                display: block;
-            }
-            .pricing-row {
-                display: block;
-                margin-bottom: 2rem;
-            }
-            .pricing-header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 1rem;
-            }
-            .pricing-body {
-                padding: 1rem;
-            }
+        .pagination a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background: rgba(17, 17, 17, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            color: #cccccc;
+            transition: all 0.3s ease;
+        }
+        .pagination a:hover {
+            background: rgba(34, 34, 34, 0.7);
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        .pagination a.active {
+            background: linear-gradient(90deg, #111111, #0a0a0a);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
     </style>
 </head>
@@ -220,11 +211,11 @@
                     <i class='bx bx-data mr-1'></i> COLOCATION
                     <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
                 </a>
-                <a href="#" class="hover:text-white transition-all duration-300 font-medium tracking-wider relative group">
+                <a href="https://discord.gg/w4RhuhrBS2" class="hover:text-white transition-all duration-300 font-medium tracking-wider relative group">
                     <i class='bx bx-support mr-1'></i> SUPORTE
                     <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
                 </a>
-                <a href="#" class="hover:text-white transition-all duration-300 font-medium tracking-wider relative group">
+                <a href="https://discord.gg/w4RhuhrBS2" class="hover:text-white transition-all duration-300 font-medium tracking-wider relative group">
                     <i class='bx bx-envelope mr-1'></i> CONTATO
                     <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
                 </a>
@@ -256,13 +247,13 @@
                 <a href="dedicado.html" class="hover:text-white transition py-2 font-medium tracking-wider">
                     <i class='bx bx-hard-drive mr-1'></i> SERVIDORES DEDICADOS
                 </a>
-                <a href="#" class="hover:text-white transition py-2 font-medium tracking-wider">
+                <a href="colocation.html" class="hover:text-white transition py-2 font-medium tracking-wider">
                     <i class='bx bx-data mr-1'></i> COLOCATION
                 </a>
-                <a href="https://discord.gg/w4RhuhrBS2" class="hover:text-white transition py-2 font-medium tracking-wider">
+                <a href="#" class="hover:text-white transition py-2 font-medium tracking-wider">
                     <i class='bx bx-support mr-1'></i> SUPORTE
                 </a>
-                <a href="https://discord.gg/w4RhuhrBS2" class="hover:text-white transition py-2 font-medium tracking-wider">
+                <a href="#" class="hover:text-white transition py-2 font-medium tracking-wider">
                     <i class='bx bx-envelope mr-1'></i> CONTATO
                 </a>
                 <button class="btn text-white px-6 py-2.5 rounded-xl font-semibold mt-2 tracking-wider">
@@ -278,51 +269,227 @@
         <div class="container mx-auto px-4 relative z-10">
             <div class="text-center max-w-3xl mx-auto">
                 <div class="inline-block mb-4 px-4 py-1 bg-[#111111] border border-[#222222] rounded-full text-sm font-medium tracking-wider">
-                    <span class="text-[#aaaaaa]">SERVIDORES DEDICADOS NOS EUA</span>
+                    <span class="text-[#aaaaaa]">BLOG DA REDE GAMER</span>
                 </div>
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 tracking-wide">
-                    INFRAESTRUTURA <span class="highlight">DEDICADA</span> DE ALTA PERFORMANCE
+                    NOSSAS <span class="highlight">PUBLICAÇÕES</span>
                 </h1>
                 <p class="text-xl text-[#cccccc] max-w-2xl mx-auto mb-8">
-                    Servidores dedicados com processadores de última geração, memória RAM expansível e armazenamento SSD/HDD para máxima performance nos EUA.
+                    Notícias, tutoriais e insights sobre hospedagem gamer, servidores e tecnologia.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
                     <button class="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center tracking-wider">
-                        ESCOLHA SEU SERVIDOR
+                        ASSINAR NEWSLETTER
                         <i class='bx bx-right-arrow-alt ml-2 text-xl'></i>
                     </button>
                     <button class="btn text-white px-8 py-4 rounded-xl font-bold text-lg tracking-wider">
-                        FALAR COM ESPECIALISTA
+                        CATEGORIAS
                     </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Location Info -->
-    <section class="py-12 bg-[#0a0a0a]">
+    <!-- Categories Section -->
+    <section class="py-6 bg-[#0a0a0a] border-b border-[#1a1a1a]">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-3">
+                <button class="category-tag">TODOS</button>
+                <button class="category-tag">VPS</button>
+                <button class="category-tag">SERVIDORES DEDICADOS</button>
+                <button class="category-tag">COLOCATION</button>
+                <button class="category-tag">TUTORIAIS</button>
+                <button class="category-tag">NOTÍCIAS</button>
+                <button class="category-tag">Dicas</button>
+                <button class="category-tag">SEGURANÇA</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Post 1 -->
+                <div class="blog-card card rounded-2xl overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-[#111111] to-[#0a0a0a] border-b border-[#222222]"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="category-tag">VPS</span>
+                            <span class="text-sm text-[#aaaaaa]">15 JAN 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Como Escolher o Melhor Plano VPS para seu Servidor de Games</h3>
+                        <p class="text-[#cccccc] mb-4">
+                            Descubra os fatores essenciais para escolher o plano VPS ideal para hospedar seu servidor de jogos...
+                        </p>
+                        <div class="author-badge mb-4">
+                            <div class="w-8 h-8 rounded-full bg-[#111111] border border-[#222222] flex items-center justify-center">
+                                <span class="text-xs font-bold">LF</span>
+                            </div>
+                            <span class="text-sm">Lucas Fortes</span>
+                        </div>
+                        <button class="btn text-white px-4 py-2 rounded-lg font-semibold text-sm tracking-wider">
+                            LER MAIS
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Post 2 -->
+                <div class="blog-card card rounded-2xl overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-[#111111] to-[#0a0a0a] border-b border-[#222222]"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="category-tag">TUTORIAIS</span>
+                            <span class="text-sm text-[#aaaaaa]">10 JAN 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Configurando Firewall para Servidores Dedicados</h3>
+                        <p class="text-[#cccccc] mb-4">
+                            Aprenda a configurar um firewall eficiente para proteger seu servidor dedicado contra ataques...
+                        </p>
+                        <div class="author-badge mb-4">
+                            <div class="w-8 h-8 rounded-full bg-[#111111] border border-[#222222] flex items-center justify-center">
+                                <span class="text-xs font-bold">CM</span>
+                            </div>
+                            <span class="text-sm">Caio Miranda</span>
+                        </div>
+                        <button class="btn text-white px-4 py-2 rounded-lg font-semibold text-sm tracking-wider">
+                            LER MAIS
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Post 3 -->
+                <div class="blog-card card rounded-2xl overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-[#111111] to-[#0a0a0a] border-b border-[#222222]"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="category-tag">NOTÍCIAS</span>
+                            <span class="text-sm text-[#aaaaaa]">05 JAN 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Novos Datacenters da Ascenty Oferecem Conectividade Premium</h3>
+                        <p class="text-[#cccccc] mb-4">
+                            Conheça as novas instalações da Ascenty e como elas podem beneficiar sua infraestrutura de hospedagem...
+                        </p>
+                        <div class="author-badge mb-4">
+                            <div class="w-8 h-8 rounded-full bg-[#111111] border border-[#222222] flex items-center justify-center">
+                                <span class="text-xs font-bold">RG</span>
+                            </div>
+                            <span class="text-sm">Rede Gamer</span>
+                        </div>
+                        <button class="btn text-white px-4 py-2 rounded-lg font-semibold text-sm tracking-wider">
+                            LER MAIS
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Post 4 -->
+                <div class="blog-card card rounded-2xl overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-[#111111] to-[#0a0a0a] border-b border-[#222222]"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="category-tag">SEGURANÇA</span>
+                            <span class="text-sm text-[#aaaaaa]">28 DEZ 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Proteção DDoS: Como Manter seu Servidor Online</h3>
+                        <p class="text-[#cccccc] mb-4">
+                            Entenda os tipos de ataques DDoS e como nossa proteção avançada mantém seus serviços sempre disponíveis...
+                        </p>
+                        <div class="author-badge mb-4">
+                            <div class="w-8 h-8 rounded-full bg-[#111111] border border-[#222222] flex items-center justify-center">
+                                <span class="text-xs font-bold">LF</span>
+                            </div>
+                            <span class="text-sm">Lucas Fortes</span>
+                        </div>
+                        <button class="btn text-white px-4 py-2 rounded-lg font-semibold text-sm tracking-wider">
+                            LER MAIS
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Post 5 -->
+                <div class="blog-card card rounded-2xl overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-[#111111] to-[#0a0a0a] border-b border-[#222222]"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="category-tag">Dicas</span>
+                            <span class="text-sm text-[#aaaaaa]">22 DEZ 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">10 Dicas para Otimizar a Performance do seu Servidor</h3>
+                        <p class="text-[#cccccc] mb-4">
+                            Melhore a performance do seu servidor com estas dicas práticas de otimização e configuração...
+                        </p>
+                        <div class="author-badge mb-4">
+                            <div class="w-8 h-8 rounded-full bg-[#111111] border border-[#222222] flex items-center justify-center">
+                                <span class="text-xs font-bold">CM</span>
+                            </div>
+                            <span class="text-sm">Caio Miranda</span>
+                        </div>
+                        <button class="btn text-white px-4 py-2 rounded-lg font-semibold text-sm tracking-wider">
+                            LER MAIS
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Post 6 -->
+                <div class="blog-card card rounded-2xl overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-[#111111] to-[#0a0a0a] border-b border-[#222222]"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="category-tag">COLOCATION</span>
+                            <span class="text-sm text-[#aaaaaa]">15 DEZ 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Por que Colocation é a Solução Ideal para Empresas de Médio Porte</h3>
+                        <p class="text-[#cccccc] mb-4">
+                            Descubra os benefícios do Colocation e como ele pode reduzir custos enquanto aumenta a performance...
+                        </p>
+                        <div class="author-badge mb-4">
+                            <div class="w-8 h-8 rounded-full bg-[#111111] border border-[#222222] flex items-center justify-center">
+                                <span class="text-xs font-bold">RG</span>
+                            </div>
+                            <span class="text-sm">Rede Gamer</span>
+                        </div>
+                        <button class="btn text-white px-4 py-2 rounded-lg font-semibold text-sm tracking-wider">
+                            LER MAIS
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="mt-16 flex justify-center">
+                <div class="pagination flex items-center space-x-2">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">
+                        <i class='bx bx-chevron-right'></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-[#0a0a0a]">
         <div class="container mx-auto px-4">
             <div class="card p-8 rounded-2xl max-w-4xl mx-auto">
                 <div class="flex flex-col md:flex-row items-center">
-                    <div class="md:w-1/3 mb-6 md:mb-0 flex justify-center">
-                        <div class="text-8xl">🇺🇸</div>
+                    <div class="md:w-1/4 mb-6 md:mb-0 flex justify-center">
+                        <div class="w-16 h-16 rounded-xl bg-black border border-[#222222] flex items-center justify-center neon-border">
+                            <i class='bx bx-news text-2xl text-white'></i>
+                        </div>
                     </div>
-                    <div class="md:w-2/3 text-center md:text-left">
-                        <h2 class="text-2xl font-bold mb-4">Localizado em Kansas City, Missouri</h2>
-                        <p class="text-[#cccccc] mb-4">
-                            Nossos servidores dedicados estão localizados em Kansas City, Missouri, 
-                            nos datacenters da Oblakdc.com Sapi de CV, garantindo excelente conectividade 
-                            global e baixa latência para servidores internacionais.
+                    <div class="md:w-3/4 text-center md:text-left">
+                        <h2 class="text-2xl font-bold mb-2">ASSINE NOSSA NEWSLETTER</h2>
+                        <p class="text-[#cccccc] mb-6">
+                            Receba as últimas notícias, tutoriais e ofertas diretamente no seu email.
                         </p>
-                        <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 text-sm text-[#aaaaaa]">
-                            <div class="flex items-center">
-                                <i class='bx bx-map mr-2'></i>
-                                <span>Kansas City, Missouri - United States Of America</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class='bx bx-building mr-2'></i>
-                                <span>Oblakdc.com Sapi de CV</span>
-                            </div>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <input type="email" placeholder="Seu melhor email" class="flex-grow px-4 py-3 bg-[#111111] border border-[#222222] rounded-lg text-white focus:outline-none focus:border-white">
+                            <button class="btn-primary text-white px-6 py-3 rounded-lg font-semibold tracking-wider">
+                                ASSINAR
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -330,237 +497,95 @@
         </div>
     </section>
 
-    <!-- Dedicated Servers Section -->
+    <!-- Popular Posts Section -->
     <section class="py-20">
         <div class="container mx-auto px-4">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-wide">SERVIDORES <span class="highlight">DEDICADOS</span></h2>
-                <p class="text-[#cccccc] text-lg">Escolha o servidor perfeito para suas necessidades de alta performance</p>
-                <div class="mt-6 p-4 bg-[#111111] border border-[#222222] rounded-lg inline-block">
-                    <p class="text-[#aaaaaa]">
-                        <i class='bx bx-info-circle text-white mr-2'></i>
-                        Todos os servidores incluem 1 IP dedicado e largura de banda ilimitada!
-                    </p>
-                </div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-wide">PUBLICAÇÕES <span class="highlight">POPULARES</span></h2>
+                <p class="text-[#cccccc] text-lg">Os artigos mais lidos da semana</p>
             </div>
             
-            <div class="overflow-x-auto">
-                <table class="pricing-table w-full">
-                    <thead>
-                        <tr class="pricing-header">
-                            <th class="p-4 text-left">SERVIDOR</th>
-                            <th class="p-4 text-left">PROCESSADOR</th>
-                            <th class="p-4 text-left">RAM</th>
-                            <th class="p-4 text-left">ARMAZENAMENTO</th>
-                            <th class="p-4 text-left">PREÇO</th>
-                            <th class="p-4 text-left">AÇÕES</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Ryzen 7 3800X Server -->
-                        <tr class="pricing-row">
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="flex items-center">
-                                    <div class="w-12 h-12 rounded-xl bg-black border border-[#222222] flex items-center justify-center mr-4 neon-border">
-                                        <i class='bx bx-chip text-xl text-white'></i>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold text-lg">RYZEN 7 3800X</h3>
-                                        <span class="text-sm text-[#aaaaaa]">8 Cores / 16 Threads</span>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="spec-value">3.9GHz / 4.5GHz Turbo</div>
-                                <div class="text-sm text-[#aaaaaa]">AMD Ryzen 7</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="spec-value">32GB - 64GB RAM</div>
-                                <div class="text-sm text-[#aaaaaa]">DDR4 ECC</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="spec-value">480GB SSD ou 4TB HDD</div>
-                                <div class="text-sm text-[#aaaaaa]">NVMe ou SATA</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="price-highlight">A partir de R$ 474,00</div>
-                                <div class="text-sm text-[#aaaaaa]">/mês</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <button class="btn text-white px-4 py-2 rounded-lg font-semibold text-sm tracking-wider">CONTRATAR</button>
-                            </td>
-                        </tr>
-                        
-                        <!-- Dual Xeon 5520 Server -->
-                        <tr class="pricing-row">
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="flex items-center">
-                                    <div class="w-12 h-12 rounded-xl bg-black border border-[#222222] flex items-center justify-center mr-4 neon-border">
-                                        <i class='bx bx-cpu text-xl text-white'></i>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold text-lg">DUAL XEON 5520</h3>
-                                        <span class="text-sm text-[#aaaaaa]">8 Cores / 16 Threads</span>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="spec-value">2.26GHz - 2 Processadores</div>
-                                <div class="text-sm text-[#aaaaaa]">Intel Xeon</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="spec-value">16GB - 64GB RAM</div>
-                                <div class="text-sm text-[#aaaaaa]">DDR3 ECC</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="spec-value">2x 2TB SATA</div>
-                                <div class="text-sm text-[#aaaaaa]">RAID 1</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="price-highlight">A partir de R$ 199,00</div>
-                                <div class="text-sm text-[#aaaaaa]">/mês</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <button class="btn text-white px-4 py-2 rounded-lg font-semibold text-sm tracking-wider">CONTRATAR</button>
-                            </td>
-                        </tr>
-                        
-                        <!-- Dual Xeon E5-2660 Server -->
-                        <tr class="pricing-row">
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="flex items-center">
-                                    <div class="w-12 h-12 rounded-xl bg-black border border-[#222222] flex items-center justify-center mr-4 neon-border">
-                                        <i class='bx bx-server text-xl text-white'></i>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold text-lg">DUAL XEON E5-2660</h3>
-                                        <span class="text-sm text-[#aaaaaa]">16 Cores / 32 Threads</span>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="spec-value">16 Cores / 32 Threads</div>
-                                <div class="text-sm text-[#aaaaaa]">Dual Processador</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="spec-value">32GB - 128GB RAM</div>
-                                <div class="text-sm text-[#aaaaaa]">DDR3 ECC</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="spec-value">480GB SSD</div>
-                                <div class="text-sm text-[#aaaaaa]">NVMe</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="price-highlight">A partir de R$ 399,00</div>
-                                <div class="text-sm text-[#aaaaaa]">/mês</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <button class="btn text-white px-4 py-2 rounded-lg font-semibold text-sm tracking-wider">CONTRATAR</button>
-                            </td>
-                        </tr>
-                        
-                        <!-- Xeon E5-2683v4 Server (Popular) -->
-                        <tr class="pricing-row">
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="flex items-center">
-                                    <div class="w-12 h-12 rounded-xl bg-black border border-[#222222] flex items-center justify-center mr-4 neon-border">
-                                        <i class='bx bx-trending-up text-xl text-white'></i>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold text-lg">XEON E5-2683V4</h3>
-                                        <div class="flex items-center mt-1">
-                                            <span class="text-sm text-[#aaaaaa]">16 Cores / 32 Threads</span>
-                                            <span class="popular-badge ml-2">MAIS POPULAR</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="spec-value">16 Cores / 32 Threads</div>
-                                <div class="text-sm text-[#aaaaaa]">Processador Único</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="spec-value">32GB - 256GB RAM</div>
-                                <div class="text-sm text-[#aaaaaa]">DDR4 ECC</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="spec-value">8TB SATA HDD</div>
-                                <div class="text-sm text-[#aaaaaa]">RAID 1</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <div class="price-highlight">A partir de R$ 499,00</div>
-                                <div class="text-sm text-[#aaaaaa]">/mês</div>
-                            </td>
-                            <td class="p-6 border-b border-[#222222]">
-                                <button class="btn-primary text-white px-4 py-2 rounded-lg font-semibold text-sm tracking-wider">CONTRATAR</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="py-20 bg-[#0a0a0a]">
-        <div class="container mx-auto px-4">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-wide">BENEFÍCIOS DOS NOSSOS <span class="highlight">SERVIDORES DEDICADOS</span></h2>
-                <p class="text-[#cccccc] text-lg">Tecnologia de ponta para oferecer a melhor experiência de hospedagem dedicada</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="card p-6 rounded-xl text-center">
-                    <div class="w-14 h-14 rounded-xl bg-black border border-[#222222] flex items-center justify-center mx-auto mb-4 neon-border">
-                        <i class='bx bx-chip text-2xl text-white'></i>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="card p-6 rounded-xl">
+                    <div class="flex items-start">
+                        <div class="mr-4">
+                            <span class="text-2xl font-bold text-[#aaaaaa]">#1</span>
+                        </div>
+                        <div>
+                            <span class="category-tag mb-2 inline-block">TUTORIAIS</span>
+                            <h3 class="font-bold text-lg mb-2">Como Instalar FiveM em um Servidor VPS</h3>
+                            <p class="text-[#aaaaaa] text-sm mb-3">
+                                Guia completo passo a passo para configurar seu servidor FiveM com otimização máxima.
+                            </p>
+                            <div class="flex items-center text-xs text-[#666666]">
+                                <i class='bx bx-time mr-1'></i>
+                                <span>8 min de leitura</span>
+                                <i class='bx bx-show ml-3 mr-1'></i>
+                                <span>2.4K visualizações</span>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="font-bold text-lg mb-2">Processadores de Última Geração</h3>
-                    <p class="text-[#aaaaaa] text-sm">AMD Ryzen e Intel Xeon para máxima performance</p>
                 </div>
-                <div class="card p-6 rounded-xl text-center">
-                    <div class="w-14 h-14 rounded-xl bg-black border border-[#222222] flex items-center justify-center mx-auto mb-4 neon-border">
-                        <i class='bx bx-memory-card text-2xl text-white'></i>
+                
+                <div class="card p-6 rounded-xl">
+                    <div class="flex items-start">
+                        <div class="mr-4">
+                            <span class="text-2xl font-bold text-[#aaaaaa]">#2</span>
+                        </div>
+                        <div>
+                            <span class="category-tag mb-2 inline-block">VPS</span>
+                            <h3 class="font-bold text-lg mb-2">Comparativo: VPS Brasil vs VPS EUA para Servidores de Games</h3>
+                            <p class="text-[#aaaaaa] text-sm mb-3">
+                                Análise detalhada de latência, performance e custo-benefício entre nossas localizações.
+                            </p>
+                            <div class="flex items-center text-xs text-[#666666]">
+                                <i class='bx bx-time mr-1'></i>
+                                <span>6 min de leitura</span>
+                                <i class='bx bx-show ml-3 mr-1'></i>
+                                <span>1.9K visualizações</span>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="font-bold text-lg mb-2">RAM Expansível</h3>
-                    <p class="text-[#aaaaaa] text-sm">Até 256GB de memória RAM DDR4</p>
                 </div>
-                <div class="card p-6 rounded-xl text-center">
-                    <div class="w-14 h-14 rounded-xl bg-black border border-[#222222] flex items-center justify-center mx-auto mb-4 neon-border">
-                        <i class='bx bx-hdd text-2xl text-white'></i>
+                
+                <div class="card p-6 rounded-xl">
+                    <div class="flex items-start">
+                        <div class="mr-4">
+                            <span class="text-2xl font-bold text-[#aaaaaa]">#3</span>
+                        </div>
+                        <div>
+                            <span class="category-tag mb-2 inline-block">SEGURANÇA</span>
+                            <h3 class="font-bold text-lg mb-2">Top 5 Vulnerabilidades em Servidores de Games e Como Evitá-las</h3>
+                            <p class="text-[#aaaaaa] text-sm mb-3">
+                                Identifique e proteja seu servidor contra os principais riscos de segurança.
+                            </p>
+                            <div class="flex items-center text-xs text-[#666666]">
+                                <i class='bx bx-time mr-1'></i>
+                                <span>10 min de leitura</span>
+                                <i class='bx bx-show ml-3 mr-1'></i>
+                                <span>1.7K visualizações</span>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="font-bold text-lg mb-2">Armazenamento SSD/HDD</h3>
-                    <p class="text-[#aaaaaa] text-sm">Opções de SSD NVMe e HDD SATA para suas necessidades</p>
                 </div>
-                <div class="card p-6 rounded-xl text-center">
-                    <div class="w-14 h-14 rounded-xl bg-black border border-[#222222] flex items-center justify-center mx-auto mb-4 neon-border">
-                        <i class='bx bx-shield-quarter text-2xl text-white'></i>
-                    </div>
-                    <h3 class="font-bold text-lg mb-2">Proteção DDoS</h3>
-                    <p class="text-[#aaaaaa] text-sm">Proteção avançada contra ataques DDoS</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Network Info -->
-    <section class="py-16">
-        <div class="container mx-auto px-4">
-            <div class="card p-8 rounded-2xl max-w-4xl mx-auto">
-                <div class="flex flex-col md:flex-row items-center">
-                    <div class="md:w-1/3 mb-6 md:mb-0 flex justify-center">
-                        <div class="text-6xl">📶</div>
-                    </div>
-                    <div class="md:w-2/3 text-center md:text-left">
-                        <h2 class="text-2xl font-bold mb-4">Conectividade Global Premium</h2>
-                        <p class="text-[#cccccc] mb-4">
-                            Nossos servidores dedicados nos EUA estão localizados em datacenters Tier III com conectividade 
-                            redundante a múltiplos provedores de internet, garantindo uptime máximo e baixa latência 
-                            para servidores internacionais.
-                        </p>
-                        <div class="flex flex-wrap justify-center md:justify-start gap-4 text-sm">
-                            <span class="bg-[#111111] px-3 py-1 rounded-full">100% Energia Renovável</span>
-                            <span class="bg-[#111111] px-3 py-1 rounded-full">99.99% Uptime SLA</span>
-                            <span class="bg-[#111111] px-3 py-1 rounded-full">Redundância Total</span>
+                
+                <div class="card p-6 rounded-xl">
+                    <div class="flex items-start">
+                        <div class="mr-4">
+                            <span class="text-2xl font-bold text-[#aaaaaa]">#4</span>
+                        </div>
+                        <div>
+                            <span class="category-tag mb-2 inline-block">NOTÍCIAS</span>
+                            <h3 class="font-bold text-lg mb-2">Anúncio: Novos Planos VPS com SSD NVMe e Processadores Ryzen</h3>
+                            <p class="text-[#aaaaaa] text-sm mb-3">
+                            Lançamento de nossa nova geração de servidores VPS com hardware de última tecnologia.
+                            </p>
+                            <div class="flex items-center text-xs text-[#666666]">
+                                <i class='bx bx-time mr-1'></i>
+                                <span>4 min de leitura</span>
+                                <i class='bx bx-show ml-3 mr-1'></i>
+                                <span>1.5K visualizações</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -573,17 +598,17 @@
         <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0gNDAgMCBMIDAgMCBMIDAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')]"></div>
         <div class="container mx-auto px-4 relative z-10">
             <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 tracking-wide">PRONTO PARA EXPERIMENTAR A <span class="highlight">MELHOR INFRAESTRUTURA DEDICADA</span>?</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 tracking-wide">QUER VER SEU ARTIGO AQUI?</h2>
                 <p class="text-xl text-[#cccccc] mb-10">
-                    Junte-se a centenas de clientes que já escolheram a Rede Gamer para sua infraestrutura dedicada nos EUA.
+                    Contribua com a comunidade gamer compartilhando seu conhecimento.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
                     <button class="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center tracking-wider">
-                        ESCOLHER SERVIDOR DEDICADO
+                        ENVIAR ARTIGO
                         <i class='bx bx-right-arrow-alt ml-2 text-xl'></i>
                     </button>
                     <button class="btn text-white px-8 py-4 rounded-xl font-bold text-lg tracking-wider">
-                        FALE COM UM ESPECIALISTA
+                        TORNE-SE UM AUTOR
                     </button>
                 </div>
             </div>
